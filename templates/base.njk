@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
-  <title>Local: {{ title | safe }} - Oslo Sandvolleyballklubb</title>
-
-  {# <link rel="preconnect" href="https://osvb.no" crossorigin> #}
-  <link rel="preload" href="./assets/fonts/noto-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./assets/css/osvb.css">
-  <link rel="shortcut icon" href="./assets/images/favicon.png">
-  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Oslo Sandvolleyballklubb organiserer turneringer og treninger for nybegynnere, etablerte og proffe spillere som vil ha et morsomt og sosialt forhold til sandvolleyball.">
-  
-  {% include "partials/open-graph.njk" %}
+  <title>Local: {{ title | safe }} - Oslo Sandvolleyballklubb</title>
 
-  <script src="./assets/js/osvb.js"></script>
+  {# <link rel="preconnect" href="https://osvb.no" crossorigin> #}
+  <link rel="preload" href="/assets/fonts/noto-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/osvb.css">
+  <link rel="shortcut icon" href="/assets/images/favicon.png"> 
+  {% include "partials/open-graph.njk" %}
 </head>
 <body>
-  {% include "partials/hero.njk" %}
-
   <div class="container container--subpages">
     {% include "partials/header.njk" %}   
     {% include "partials/nav.njk" %}
@@ -35,5 +29,7 @@
 
     {% include "partials/footer.njk" %}
   </div>
+  {% include "partials/hero.njk" %}
+  <script src="/assets/js/osvb.js"></script>
 </body>
 </html>

@@ -8,6 +8,10 @@
   "author": "Martin Berglund",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "@tinacms/cli": "^1.5.39"
+  },
+  "dependencies": {
+    "tinacms": "^1.5.28"
   }
 }
