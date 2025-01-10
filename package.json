@@ -2,16 +2,13 @@
   "name": "osvb-11ty",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "dev": "eleventy --serve"
   },
   "author": "Martin Berglund",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@tinacms/cli": "^1.5.39"
-  },
-  "dependencies": {
-    "tinacms": "^1.5.28"
+    "@11ty/eleventy": "^3.0.0"
   }
 }

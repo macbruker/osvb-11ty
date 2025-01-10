@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description or site.description }}">
+  <title>{{ '[LOCAL] ' if eleventy.env.runMode === 'serve' }} {{ title or '' }}{{ ' – ' if page.url != '/' }}{{ site.title }}</title>
+
+  {# <link rel="preconnect" href="https://osvb.no" crossorigin> #}
+  <link rel="preload" href="/assets/noto-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" href="/assets/images/favicon.webp"> 
+  <meta name="generator" content="{{ eleventy.generator }}">
+  {% include "partials/open-graph.njk" %}
+</head>
+<body>
+  {% block debug %}{% endblock debug %}
+  <div class="grid-layout">
+    {% include "partials/header.njk" %}
+    {% if page.url != '/' %}{% include "partials/nav.njk" %}{% endif %}
+
+    <main class="main {{ 'main--home' if page.url === '/' else 'main--page' }}">
+    {{ content | safe }}
+    </main>
+    
+    {% include "partials/sponsors.njk" %}
+
+    <div class="join">
+      <a class="join__link" href="#">Bli medlem</a>
+    </div>
+
+    {% include "partials/footer.njk" %}
+  </div>
+
+  {% include "partials/hero.njk" %}
+  <script src="/assets/osvb.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+---
+description: 'Oslo Sandvolleyballklubb organiserer turneringer og treninger for nybegynnere, etablerte og proffe spillere som vil ha et morsomt og sosialt forhold til sandvolleyball.'
+permalink: '/'
+layout: 'base.njk'
+---
+
+
+<div class="pages">
+  {% for item in site.menu %}
+    <article>
+      <a href="{{ item.url or '#' }}">{{ item.title }}</a>
+      <p>{{ item.description }}
+    </article>
+  {% endfor %}
+</div>
+
+
+<div class="scroll-container">
+  <div class="side-scroll">
+    <div class="posts">
+      <div></div>
+      {% for post in collections.post %}
+        <article class="polaroid">
+          <img src="{{ post.data.media }}" alt="">
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </article>
+      {% endfor %}
+      <div></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+---
+title: 'Kalender'
+description: 'Alt du trenger å vite om de ulike turneringene og arrangementene  i Oslo sandvolleyballklubb.'
+layout: base.njk
+permalink: '/kalender/index.html'
+---
+
+<div>
+<h1 class="title ">{{ title }}</h1>
+<p>{{ description | safe }}</p>
+</div>
+
+<h2 style="text-transform: uppercase; font-size: 85%; font-weight: 800; margin-block: 3em 1em">Juli</h2>
+<ul class="events">
+    {% for item in arrangementer %}
+    <li>
+        <article class="event-listing">
+            <time class="cal-day" datetime="{{ item.date }}">
+                <span>{{ (item.date | dateOnly).slice(0,3) }}</span>
+                <span>{{ (item.date | dateOnly).slice(4,7) }}</span>
+            </time>
+            <h3><a href="#">{{ item.title | safe }}</a></h3>
+            <p>{{ item.time }}</p>
+        </article>
+    </li>
+    {% endfor %}
+</ul>
+
+<h2 style="text-transform: uppercase; font-size: 85%; font-weight: 800; margin-block: 3em 1em">August</h2>
+<ul class="events">
+    {% for item in arrangementer %}
+    <li>
+        <article class="event-listing">
+            <time class="cal-day" datetime="{{ item.date }}">
+                <span>{{ (item.date | dateOnly).slice(0,3) }}</span>
+                <span>{{ (item.date | dateOnly).slice(4,7) }}</span>
+            </time>
+            <h3><a href="#">{{ item.title | safe }}</a></h3>
+            <p>{{ item.time }}</p>
+        </article>
+    </li>
+    {% endfor %}
+</ul>
+<aside class="aside"></aside>

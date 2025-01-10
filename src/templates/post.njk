@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+
+<h1 class="title ">{{ title }}</h1>
+
+{% if media %}
+<div class="thumbnail">
+  <img src="{{ media }}" alt="">
+</div>
+{% endif %}
+
+{# <div class="ingress">
+  <p>{{ description | safe }}</p>
+</div> #}
+
+{{ content | safe }}
+
+<aside class="aside"></aside>

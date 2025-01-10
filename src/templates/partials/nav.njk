@@ -1,0 +1,19 @@
+<nav class="nav">
+  <button type="button" aria-expanded="false" data-nrk-core-toggle-2-2-3="false"
+    aria-controls="lrf9l9ipqzo" id="lrf9l9iptmk">
+    <span>Meny</span>
+    <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+      <g fill-rule="evenodd" fill="currentColor">
+        <rect width="20" height="2" x="2" y="4"></rect>
+        <rect width="20" height="2" x="2" y="11"></rect>
+        <rect width="20" height="2" x="2" y="18"></rect>
+      </g>
+    </svg>
+  </button>
+
+  <ul class="menu" id="lrf9l9ipqzo" aria-labelledby="lrf9l9iptmk" hidden>
+    {% for item in site.menu %}
+    <li><a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
