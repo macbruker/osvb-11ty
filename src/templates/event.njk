@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+
+<a class="kicker" href="/kalender/">Kalender</a>
+<h1 class="title ">{{ title }}</h1>
+
+<dl class="event-data">
+    <div>
+        <dt>Dato</dt>
+        <dd>{{ date }}</dd>
+    </div>
+    <div>
+        <dt>Tid</dt>
+        <dd>{{ time }}</dd>
+    </div>
+    <div>
+        <dt>Turneringsleder</dt>
+        <dd>Ola Nordmann</dd>
+    </div>
+    <div>
+        <dt>Bane</dt>
+        <dd>{{ court | safe }}</dd>
+    </div>
+</dl>
+
+{% if media %}
+<div class="thumbnail">
+  <img src="{{ media }}" alt="">
+</div>
+{% endif %}
+
+
+{{ content | safe }}
+
+<aside class="aside"></aside>

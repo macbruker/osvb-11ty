@@ -9,6 +9,7 @@
   "author": "Martin Berglund",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "markdown-it-table": "^4.1.1"
   }
 }

@@ -12,16 +12,14 @@ permalink: '/kalender/index.html'
 
 <h2 style="text-transform: uppercase; font-size: 85%; font-weight: 800; margin-block: 3em 1em">Juli</h2>
 <ul class="events">
-    {% for item in arrangementer %}
-    <li>
-        <article class="event-listing">
-            <time class="cal-day" datetime="{{ item.date }}">
-                <span>{{ (item.date | dateOnly).slice(0,3) }}</span>
-                <span>{{ (item.date | dateOnly).slice(4,7) }}</span>
-            </time>
-            <h3><a href="#">{{ item.title | safe }}</a></h3>
-            <p>{{ item.time }}</p>
-        </article>
+    {% for item in collections.event %}
+    <li class="event-listing">
+        <time class="cal-day" datetime="{{ item.data.date }}">
+            <span>{{ (item.data.date | dateOnly).slice(0,3) }}</span>
+            <span>{{ (item.data.date | dateOnly).slice(4,7) }}</span>
+        </time>
+        <a href="{{ item.url }}">{{ item.data.title | safe }}</a>
+        <p>{{ item.data.time }}</p>
     </li>
     {% endfor %}
 </ul>
@@ -29,15 +27,13 @@ permalink: '/kalender/index.html'
 <h2 style="text-transform: uppercase; font-size: 85%; font-weight: 800; margin-block: 3em 1em">August</h2>
 <ul class="events">
     {% for item in arrangementer %}
-    <li>
-        <article class="event-listing">
-            <time class="cal-day" datetime="{{ item.date }}">
-                <span>{{ (item.date | dateOnly).slice(0,3) }}</span>
-                <span>{{ (item.date | dateOnly).slice(4,7) }}</span>
-            </time>
-            <h3><a href="#">{{ item.title | safe }}</a></h3>
-            <p>{{ item.time }}</p>
-        </article>
+    <li class="event-listing">
+        <time class="cal-day" datetime="{{ item.date }}">
+            <span>{{ (item.date | dateOnly).slice(0,3) }}</span>
+            <span>{{ (item.date | dateOnly).slice(4,7) }}</span>
+        </time>
+        <a href="#">{{ item.title | safe }}</a>
+        <p>{{ item.time }}</p>
     </li>
     {% endfor %}
 </ul>

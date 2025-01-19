@@ -11,9 +11,11 @@
     </svg>
   </button>
 
-  <ul class="menu" id="lrf9l9ipqzo" aria-labelledby="lrf9l9iptmk" hidden>
-    {% for item in site.menu %}
-    <li><a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="menu" id="lrf9l9ipqzo" aria-labelledby="lrf9l9iptmk" hidden>
+    <ul>
+      {% for item in site.menu %}
+      <li><a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>

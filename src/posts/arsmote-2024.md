@@ -1,9 +1,8 @@
 ---
 title: 'Årsmøte 2024'
+description: 'Styret innkaller til årsmøte i OSVB, slik som også informert om i nyhetsbrev til alle medlemmer. Årsmøtet avholdes den 2. mars 19:45.'
 media: '/assets/images/arsmote-2024.webp'
 ---
-
-Styret innkaller til årsmøte i OSVB, slik som også informert om i nyhetsbrev til alle medlemmer. Årsmøtet avholdes den 2. mars 19:45.
 
 * **Dato og tid:** 2. Mars kl. 19.45 (til ca. 20.30)
 * **Sted:** First Hotel Kviberg Park, Gøteborg

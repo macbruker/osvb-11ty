@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Noto Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400 900;
     font-stretch: extra-condensed;
     font-display: swap;
     src: url(/assets/noto-sans-latin-normal.woff2) format('woff2');
@@ -21,7 +21,7 @@
 @font-face {
     font-family: 'Noto Sans';
     font-style: normal;
-    font-weight: 300 900;
+    font-weight: 400 900;
     font-display: swap;
     font-stretch: 100%;
     src: url(/assets/noto-sans-latin-normal.woff2) format('woff2');

@@ -1,12 +1,11 @@
 ---
 title: 'Vil du være hovedtrener sommeren 2024?'
+description: 'Har du et brennende engasjement for sandvolleyball og lyst til å jobbe med det sommeren / sandvolleyballsesongen 2024?'
 media: '/assets/images/hovedtrener-2024.webp'
 ---
 
-Har du et brennende engasjement for sandvolleyball og lyst til å jobbe med det sommeren / sandvolleyballsesongen 2024?
-
 ## Hvem er vår nye hovedtrener?
-OSVB søker hovedtrener til å ta ansvar for treninger, trenere og spillere på Voldsløkka i sommer. Vi søker deg som er engasjert og har en del erfaring med sandvolleyball, og har tid og lyst til å sørge for lykkelige medlemmer hos oss i OSVB. Det er en fordel om du er strutkurert, kommuniserer godt og trives med å jobbe i team. Er det deg?
+OSVB søker hovedtrener til å ta ansvar for treninger, trenere og spillere på Voldsløkka i sommer. Vi søker deg som er engasjert og har en del erfaring med sandvolleyball, og har tid og lyst til å sørge for lykkelige medlemmer hos oss i OSVB. Det er en fordel om du er strukturert, kommuniserer godt og trives med å jobbe i team. Er det deg?
 
 ### Vi ønsker at du er
 * Interessert i sandvolleyball og har erfaring som trener
@@ -40,4 +39,4 @@ Du kan søke alene eller sammen med en annen. Vi avtaler og gjennomfører interv
 Vi håper å høre fra deg som er nysgjerrig på stillingen! Send oss også gjerne også en mail om har spørsmål eller lurer på om stillingen kan være noe for deg.
 
 ## Søknadsfrist
-4\. FEBRUAR 2024
+4\. Februar 2024

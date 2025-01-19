@@ -19,7 +19,7 @@
     {% include "partials/header.njk" %}
     {% if page.url != '/' %}{% include "partials/nav.njk" %}{% endif %}
 
-    <main class="main {{ 'main--home' if page.url === '/' else 'main--page' }}">
+    <main class="main {{ 'main--home grid-layout' if page.url === '/' else 'main--page' }}">
     {{ content | safe }}
     </main>
     

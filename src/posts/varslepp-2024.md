@@ -1,8 +1,9 @@
 ---
 title: 'Vårslepp 2024!'
 media: '/assets/images/varslepp-2024.webp'
+description: Oslo Sandvolleyballklubb inviterer til Vårslepp 1 - 3 mars. Vi ønsker å kickstarte sesongen for våre medlemmer med en helg fylt med treninger, turneringer og mulighet for å bli kjent med OSVBere.
+
 ---
-Oslo Sandvolleyballklubb inviterer til Vårslepp 1 - 3 mars. Vi ønsker å kickstarte sesongen for våre medlemmer med en helg fylt med treninger, turneringer og mulighet for å bli kjent med OSVBere.
 
 Dette er en tur du ikke trenger makker for å reise på!
 
@@ -50,24 +51,24 @@ Ta kontakt på post@osvb.no eller direkte med Stine Schjødt-Osmo (92 41 02 31 /
 Endringer kan komme. Treningsgrupper og romfordeling kommer rett før avreise. 
 
 ### Fredag
-**16.00:** Oppmøte på Ryen
-**20.00:** Ankomst GBC og middag
-**21.00:** Serie-A
+**16.00:** Oppmøte på Ryen  
+**20.00:** Ankomst GBC og middag  
+**21.00:** Serie-A  
 **23.00:** Takk for i dag
 
 ### Lørdag
-**07–10:** Frokost
-**09–11:** Trening pulje X
-**11–13:** Trening pulje Y
-**13–14:** Lunsj
-**15–18:** King & Queen
-**19.09:** Årsmøte + Workshop
-**20.30:** Middag og sosialt
+**07–10:** Frokost  
+**09–11:** Trening pulje X  
+**11–13:** Trening pulje Y  
+**13–14:** Lunsj  
+**15–18:** King & Queen  
+**19.09:** Årsmøte + Workshop  
+**20.30:** Middag og sosialt  
 **23.00:** Bytur
 
 ### Søndag
-**07–10:** Frokost og utsjekk
-**09–11:** Trening pulje X
-**11–13:** Trening pulje Y
-**11.30–13.30:** Lunsj
+**07–10:** Frokost og utsjekk  
+**09–11:** Trening pulje X  
+**11–13:** Trening pulje Y  
+**11.30–13.30:** Lunsj  
 **14.00:** Avreise fra GBC
