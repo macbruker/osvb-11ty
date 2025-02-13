@@ -72,7 +72,6 @@
 /* NAVIGATION */
 
 .nav {
-    text-transform: uppercase;
     font-stretch: extra-condensed;
     display: contents;
     color: var(--color-white);
@@ -93,6 +92,7 @@
     align-self: center;
     translate: 0.5em -0.25em;
     z-index: 1;
+    text-transform: uppercase;
 }
 
 :where(.nav) button span {
@@ -114,12 +114,12 @@
 }
 
 :where(.nav) button[aria-expanded=true] rect:first-child {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
     transform-origin: 12px 5px
 }
 
 :where(.nav) button[aria-expanded=true] rect:last-child {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
     transform-origin: 12px 19px
 }
 
@@ -139,15 +139,14 @@
 
 /* MENU */
 
+
 .menu {
     grid-column: container;
-    list-style: none;
-    padding-inline-start: 0;
     inline-size: 100%;
-    z-index: 1;
     block-size: auto;
     overflow: clip;
     transition: block-size 0.25s ease;
+    z-index: 1;
 }
 
 .menu[hidden] { 
@@ -156,40 +155,54 @@
     inline-size: 100%;
  }
 
- .menu ul {
+
+
+
+.menu ul {
+    list-style: none;
+    padding-inline-start: 0;
     margin-block-end: 2em;
     columns: 36ch;
     gap: 4ch;
  }
 
 
-:where(.menu) li {
-    display: block;
-    animation: fade-in 200ms ease-in 25ms backwards;
-    border-block-start: 1px solid var(--color-white-10);
+.menu li {
+    position: relative;
+    break-inside: avoid;
+    margin-block-start: 0;
+    border-block-end: 1px solid color-mix(in srgb, var(--color-blue) 30%, transparent);
 }
 
-:where(.menu) a {
+.menu a {
     display: block;
-    padding-inline: 0.5em;
-    margin-inline: -0.5em;
-    margin-block: -1px;
-    font-size: 1.125em;
-    font-weight: 300;
-    line-height: 2.5;
-    letter-spacing: .025em;
-    text-decoration: none;
     color: currentColor;
-    border-radius: 0.25em;
+    text-decoration: none;
+    font-size: clamp(1.25rem, 0.5rem + 2.5vw, 2rem);
+    font-stretch: 62.5%;
+    font-weight: 400;
+    padding-block: 0.5em;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.5);
 }
 
 :where(.menu) a:hover {
-    background-color: var(--color-blue);
+    text-decoration-line: underline;
 }
 
-/* :where(.menu) a[aria-current="page"] {
-    background-color: var(--color-night);
-} */
+:where(.menu) a:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+:where(.menu) a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-blue);
+    text-decoration-thickness: 0.1ch;
+}
+
+
+
 
 
 
@@ -302,63 +315,6 @@
 }
 
 
-.pages {
-    display: grid;
-    grid-column: container;
-    margin-block: 4rem;
-    color: var(--color-white);
-
-    @media (width > 800px) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: clamp(1.5rem, 0.9783rem + 2.6087vi, 3rem);
-    }
-}
-
-:where(.pages) article {
-    position: relative;
-}
-
-:where(.pages) article:nth-last-child(n + 2) {
-    @media (max-width: 799px) {
-        border-block-end: 1px solid color-mix(in srgb, var(--color-blue) 30%, transparent);
-    }
-}
-:where(.pages) article:nth-last-child(n + 3) {
-    @media (width > 800px) {
-        border-block-end: 1px solid color-mix(in srgb, var(--color-blue) 30%, transparent);
-    }
-}
-
-:where(.pages) * {
-    text-shadow: 0 1px 2px rgb(0 0 0 / 0.5);
-}
-
-:where(.pages) a {
-    display: block;
-    color: currentColor;
-    text-decoration: none;
-    font-size: clamp(1.5rem, 1.3263rem + 0.8687vi, 1.9995rem);
-    font-stretch: 62.5%;
-    font-weight: 600;
-    margin-block-start: clamp(0.75rem, 0.2283rem + 2.6087vi, 2.25rem);
-}
-
-:where(.pages) a:hover {
-    text-decoration-line: underline;
-}
-
-:where(.pages) a:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-}
-
-:where(.pages) a:hover {
-    text-decoration-line: underline;
-    text-decoration-color: var(--color-blue);
-    text-decoration-thickness: 0.1ch;
-}
-
 :where(.pages) p {
     --text-opacity: 0.8;
     display: block;
@@ -369,13 +325,13 @@
 
 .scroll-container {
     grid-column: full;
-    margin-block: 2rem 6rem;
+    margin-block: 1lh;
     overflow: hidden;
 }
 .side-scroll {
     overflow-x: scroll;
     margin-block-end: -2rem;
-    padding-block: 2rem 2rem;
+    padding-block: 1lh;
 }
 .posts {
     display: grid;
@@ -596,7 +552,8 @@ a.kicker:hover {
 }
 
 :where(.teaser) h2 {
-    margin-block-start: 0
+    margin-block-start: 0;
+    font-size: 1.125em;
 }
 
 :where(.teaser) p {

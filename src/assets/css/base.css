@@ -41,11 +41,6 @@ body {
     margin: 0
 }
 
-:where(p, li) {
-    text-wrap: pretty;
-}
-
-
 h1,
 h2,
 h3,
@@ -84,6 +79,20 @@ h4 {
     margin-block-start: 0.25lh;
 }
 
+ul:not([class]) {
+    padding-inline-start: 1.15em;
+    list-style-type: square
+}
+
+ul[class] {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+:where(p, li) {
+    text-wrap: pretty;
+}
+
 b,
 strong {
     font-weight: 600
@@ -91,15 +100,6 @@ strong {
 
 a {
     color: var(--color-blue);
-}
-
-ul {
-    padding-inline-start: 1.15em;
-    list-style-type: square
-}
-
-:where(p, li) {
-    text-wrap: pretty;
 }
 
 dl {

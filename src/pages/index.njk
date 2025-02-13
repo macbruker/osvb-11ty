@@ -4,15 +4,16 @@ permalink: '/'
 layout: 'base.njk'
 ---
 
-
-<div class="pages">
-  {% for item in site.menu %}
-    <article>
-      <a href="{{ item.url or '#' }}">{{ item.title }}</a>
-      <p>{{ item.description }}
-    </article>
-  {% endfor %}
-</div>
+<nav class="menu">
+  <ul>
+    {% for item in site.menu %}
+      <li>
+        <a href="{{ item.url or '#' }}">{{ item.title }}</a>
+        {# <p>{{ item.description }} #}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
 
 
 <div class="scroll-container">

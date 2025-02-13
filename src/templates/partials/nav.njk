@@ -4,9 +4,9 @@
     <span>Meny</span>
     <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
       <g fill-rule="evenodd" fill="currentColor">
-        <rect width="20" height="2" x="2" y="4"></rect>
+        <rect width="20" height="2" x="2" y="3"></rect>
         <rect width="20" height="2" x="2" y="11"></rect>
-        <rect width="20" height="2" x="2" y="18"></rect>
+        <rect width="20" height="2" x="2" y="19"></rect>
       </g>
     </svg>
   </button>
@@ -14,7 +14,9 @@
   <div class="menu" id="lrf9l9ipqzo" aria-labelledby="lrf9l9iptmk" hidden>
     <ul>
       {% for item in site.menu %}
-      <li><a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a></li>
+      <li>
+        <a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a>
+      </li>
       {% endfor %}
     </ul>
   </div>
