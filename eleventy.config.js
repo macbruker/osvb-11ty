@@ -1,11 +1,12 @@
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
 import { markdownItTable } from "markdown-it-table";
+import { dateFormat } from "./src/_11ty/filters.js";
 
 export default function(eleventyConfig) {
     // Human readable date filters
-    eleventyConfig.addFilter("dateOnly", function (dateVal, options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' }, locale = "no-NO") {
-        var theDate = new Date(dateVal);
-        return theDate.toLocaleDateString(locale, options);
-    });
+    eleventyConfig.addFilter("dateFormat", dateFormat);
 
 	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItTable));
 
@@ -16,7 +17,11 @@ export default function(eleventyConfig) {
     // Watch targets
     eleventyConfig.addWatchTarget("./src/assets/css/*.css");
 
-    // Eleventy directory configuration
+    // Plugins
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	// eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+
+    // Directory configuration
     return {
         dir: {
             input: 'src',

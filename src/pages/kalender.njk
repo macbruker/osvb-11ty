@@ -3,20 +3,43 @@ title: 'Kalender'
 description: 'Alt du trenger å vite om de ulike turneringene og arrangementene  i Oslo sandvolleyballklubb.'
 layout: base.njk
 permalink: '/kalender/index.html'
+eleventyNavigation:
+  key: Menu
 ---
 
 <div>
-<h1 class="title ">{{ title }}</h1>
-<p>{{ description | safe }}</p>
+    <h1 class="title ">{{ title }}</h1>
+    <p>{{ description | safe }}</p>
 </div>
 
-<h2 style="text-transform: uppercase; font-size: 85%; font-weight: 800; margin-block: 3em 1em">Juli</h2>
+{% for month, events in collections.event | groupby("data.month") %}
+    <h2>{{ month | dateFormat('LLLL') | capitalize }}</h2>
+    <ul class="events">
+    {% for event in events %}
+        <li class="event-listing">
+            <time class="cal-day" datetime="{{ event.data.date_start }}">
+                <span>{{ event.data.date_start | dateFormat('ccc') | replace('.', '') }}</span>
+                <span>{{ event.data.date_stop | dateFormat('dd') }}</span>
+            </time>
+            <a href="{{ event.url }}">{{ event.data.title | safe }}</a>
+            <p>Bane {{ event.data.court }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+
+
+
+
+
+
+{# <h2 style="text-transform: uppercase; font-size: 85%; font-weight: 800; margin-block: 3em 1em">Juli</h2>
 <ul class="events">
     {% for item in collections.event %}
     <li class="event-listing">
-        <time class="cal-day" datetime="{{ item.data.date }}">
-            <span>{{ (item.data.date | dateOnly).slice(0,3) }}</span>
-            <span>{{ (item.data.date | dateOnly).slice(4,7) }}</span>
+        <time class="cal-day" datetime="{{ item.data.date_start }}">
+            <span>{{ item.data.date_start | dateFormat('ccc') | replace('.', '') }}</span>
+            <span>{{ item.data.date_stop | dateFormat('dd') }}</span>
         </time>
         <a href="{{ item.url }}">{{ item.data.title | safe }}</a>
         <p>{{ item.data.time }}</p>
@@ -26,15 +49,16 @@ permalink: '/kalender/index.html'
 
 <h2 style="text-transform: uppercase; font-size: 85%; font-weight: 800; margin-block: 3em 1em">August</h2>
 <ul class="events">
-    {% for item in arrangementer %}
+    {% for item in collections.event %}
     <li class="event-listing">
-        <time class="cal-day" datetime="{{ item.date }}">
-            <span>{{ (item.date | dateOnly).slice(0,3) }}</span>
-            <span>{{ (item.date | dateOnly).slice(4,7) }}</span>
+        <time class="cal-day" datetime="{{ item.data.date_start }}">
+            <span>{{ item.data.date_start | dateFormat('ccc') | replace('.', '') }}</span>
+            <span>{{ item.data.date_stop | dateFormat('dd') }}</span>
         </time>
-        <a href="#">{{ item.title | safe }}</a>
-        <p>{{ item.time }}</p>
+        <a href="{{ item.url }}">{{ item.data.title | safe }}</a>
+        <p>{{ item.data.time }}</p>
     </li>
     {% endfor %}
-</ul>
+</ul> #}
+
 <aside class="aside"></aside>

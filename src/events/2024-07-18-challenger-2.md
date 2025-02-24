@@ -1,7 +1,7 @@
 ---
 title: 'Challenger #2'
-date: '2024-07-18'
-time: '17.00–18.30'
+date_start: '2024-07-18T17:00'
+date_stop: '2024-07-18T18:30'
 court: '1–6'
 ---
 

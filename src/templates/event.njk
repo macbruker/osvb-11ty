@@ -8,11 +8,11 @@ layout: base.njk
 <dl class="event-data">
     <div>
         <dt>Dato</dt>
-        <dd>{{ date }}</dd>
+        <dd>{{ date_start | dateFormat('DDDD') | capitalize }}</dd>
     </div>
     <div>
         <dt>Tid</dt>
-        <dd>{{ time }}</dd>
+        <dd>{{ date_start | dateFormat('T') | replace(':', '.') }}–{{ date_stop | dateFormat('T') | replace(':', '.') }}</dd>
     </div>
     <div>
         <dt>Turneringsleder</dt>
