@@ -456,27 +456,19 @@ a.kicker:hover {
     font-variation-settings: "wght" 900;
 }
 
-.ingress {
-    @media (width > 800px) {
-        
-    }
-}
-
-
-
 .thumbnail {
+    position: relative;
     aspect-ratio: 7/8;
     background-color: var(--color-white);
     border-radius: 0.125rem;
     box-shadow: 0 12px 24px -16px rgb(0 0 0 / 0.25);
-    padding: clamp(0.375rem, 0.2446rem + 0.6522vi, 0.75rem);
+    padding: 0.75rem;
     transform-origin: 50% 50%;
-    position: relative;
     z-index: 10;
+    max-inline-size: 48ch;
 
     @media (width > 1024px) {
-        max-inline-size: 18em;
-        margin: 0.5em -8em 1em 2em;
+        margin: 0.5lh -16ch 1lh 3ch;
         rotate: -2.5deg;
         float: right;
     }
@@ -692,6 +684,8 @@ a.kicker:hover {
     inline-size: 1.75em;
     overflow: clip;
     border-radius: 0.125em;
+    outline: 1px solid var(--color-night-10);
+    outline-offset: -1px;
 }
 
 .cal-day :nth-child(1) {
