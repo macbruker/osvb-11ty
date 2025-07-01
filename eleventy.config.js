@@ -19,7 +19,17 @@ export default function(eleventyConfig) {
 
     // Plugins
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
-	// eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        formats: ["avif", "webp", "jpeg"],
+        widths: ["auto"],
+        htmlOptions: {
+            imgAttributes: {
+                loading: "lazy",
+                decoding: "async"
+            },
+            pictureAttributes: {}
+        }
+    });
 
     // Directory configuration
     return {

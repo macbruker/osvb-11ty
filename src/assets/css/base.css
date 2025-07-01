@@ -120,7 +120,8 @@ figure {
 }
 
 img {
-    max-inline-size: 100%
+    max-inline-size: 100%;
+    block-size: auto;
 }
 
 button {

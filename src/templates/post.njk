@@ -6,7 +6,7 @@ layout: base.njk
 
 {% if media %}
 <div class="thumbnail">
-  <img src="{{ media }}" alt="">
+  <img src="{{ media }}" eleventy:widths="360, 640" alt="">
 </div>
 {% endif %}
 
