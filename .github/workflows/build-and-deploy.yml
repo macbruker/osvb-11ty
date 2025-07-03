@@ -1,32 +1,39 @@
-name: Build & deploy
+name: Deploy & Deploy to GitHub Pages
+
 on:
   workflow_dispatch:
 
+  # push:
+  #   branches:
+  #     - main
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ['20']
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - name: Install packages
-        run: npm ci
-      - name: Run npm build
-        run: npm run build
-      - name: Prepare tag
-        id: prepare_tag
-        if: startsWith(github.ref, 'refs/tags/')
-        run: |
-          echo "DEPLOY_TAG_NAME=deploy-${TAG_NAME}" >> "${GITHUB_OUTPUT}"
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+          node-version: "22"
+          cache: npm
+
+      - name: Persist Eleventy .cache
+        uses: actions/cache@v4
         with:
+          path: ./.cache
+          key: ${{ runner.os }}-eleventy-fetch-cache
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
