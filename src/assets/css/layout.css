@@ -326,12 +326,17 @@
 .scroll-container {
     grid-column: full;
     margin-block: 1lh 1.5lh;
-    overflow: hidden;
+
+    @media (width < 1200px) {
+        overflow: hidden;
+    }
 }
 .side-scroll {
-    overflow-x: scroll;
-    margin-block-end: -1lh;
-    padding-block: 1lh 1.5lh;
+    @media (width < 1200px) {
+        overflow-x: scroll;
+        margin-block-end: -1lh;
+        padding-block: 1lh 1.25lh;
+    }
 }
 .posts {
     display: grid;
