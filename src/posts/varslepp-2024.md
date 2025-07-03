@@ -11,7 +11,7 @@ Turen går til Gøteborg Beach Club, et stort innendørs beachvolleyballanlegg m
 
 * **Hvor:** Gøteborg Beach Center
 * **Når:** 1 - 3 mars 2024
-* **Ansvarlige:** Stine Schjødt-Osmo
+* **Ansvarlige:** Kari Nordmann
 
 ## Pakketur
 Alt inkludert for 3600,– per person.
@@ -45,7 +45,7 @@ Romfordeling til hotellet blir satt opp på bakgrunn av ønsker i utfylt påmeld
 Denne turen er for alle, uansett nivå og om du har en fast makker eller ikke. Meld deg på og bli med!
 
 ## Spørsmål?
-Ta kontakt på post@osvb.no eller direkte med Stine Schjødt-Osmo (92 41 02 31 / messenger)
+Ta kontakt på post@osvb.no eller direkte med Kari Nordmann (00 00 00 00 / messenger)
 
 ## Program
 Endringer kan komme. Treningsgrupper og romfordeling kommer rett før avreise. 
