@@ -162,7 +162,7 @@
     list-style: none;
     padding-inline-start: 0;
     margin-block-end: 2em;
-    columns: 36ch;
+    columns: 32ch 2;
     gap: 4ch;
  }
 
@@ -746,7 +746,7 @@ a.kicker:hover {
 }
 
 .sponsor-line {
-    background: url(/assets/images/sponsor-wall.webp) repeat-x;
+    background: url(images/sponsor-wall.webp) repeat-x;
     background-position: center;
     background-blend-mode: multiply;
     min-block-size: clamp(5rem, 2.6667rem + 11.6667vi, 12rem);
