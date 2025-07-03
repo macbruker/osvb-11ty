@@ -1,5 +1,7 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+
 
 import { markdownItTable } from "markdown-it-table";
 import { dateFormat } from "./src/_11ty/filters.js";
@@ -19,6 +21,7 @@ export default function(eleventyConfig) {
 
     // Plugins
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         formats: ["avif", "webp", "jpeg"],
         widths: ["auto"],
@@ -33,6 +36,7 @@ export default function(eleventyConfig) {
 
     // Directory configuration
     return {
+        pathPrefix: "osvb-11ty",
         dir: {
             input: 'src',
             includes: 'templates',
