@@ -15,6 +15,8 @@ export default function(eleventyConfig) {
     // Copy files to build folder
     eleventyConfig.addPassthroughCopy({ "src/assets/fonts" : "assets"});
     eleventyConfig.addPassthroughCopy({ "src/assets/js" : "assets"});
+    eleventyConfig.addPassthroughCopy("src/assets/images/sponsor-wall.webp");
+    eleventyConfig.addPassthroughCopy("src/assets/images/favicon.webp");
 
     // Watch targets
     eleventyConfig.addWatchTarget("./src/assets/css/*.css");
@@ -31,7 +33,8 @@ export default function(eleventyConfig) {
                 decoding: "async"
             },
             pictureAttributes: {}
-        }
+        },
+        urlPath: '/assets/images/'
     });
 
     // Directory configuration
