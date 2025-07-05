@@ -32,11 +32,11 @@ Følge opp trenere og treningsgrupper, og sikre at flest mulig får glede av å 
 Bidra til å hente inn tilbakemeldinger fra spillere og trenere, slik at vi kan lære og bli bedre sesong for sesong.
 
 ## Hvordan søker du?
-Send oss en mail til post@osvb.no med litt info om deg, din motivasjon og hvorfor du er en god kandidat, samt en enkel CV med relevant erfaring.
+Send oss en e-post til post@osvb.no med litt info om deg, din motivasjon og hvorfor du er en god kandidat, samt en enkel CV med relevant erfaring.
 
 Du kan søke alene eller sammen med en annen. Vi avtaler og gjennomfører intervjuer fortløpende. Stillingen er lønnet.
 
-Vi håper å høre fra deg som er nysgjerrig på stillingen! Send oss også gjerne også en mail om har spørsmål eller lurer på om stillingen kan være noe for deg.
+Vi håper å høre fra deg som er nysgjerrig på stillingen! Send oss også gjerne også en e-post om har spørsmål eller lurer på om stillingen kan være noe for deg.
 
 ## Søknadsfrist
 4\. Februar 2024

@@ -26,7 +26,7 @@ Alt inkludert for 3600,– per person.
 ## Påmelding
 Påmelding søndag 21.januar 12:00!
 
-Påmelding i Spond «Vårslepp 2024» gruppekode FWWCU. Det er begrenset antall plasser (45) og førstemann til mølla gjelder. Det blir ventelisteordning i Spond. Påmeldingen er bindende* og betalingen skjer direkte i Spond ved påmelding. I tillegg må man fylle ut skjema før 1. februar. Påmeldingen er ikke fullstendig før skjema er fyllt ut, og dersom dette ikke skjer innen fristen går plassen videre til neste person på en evt. venteliste.
+Påmelding i Spond «Vårslepp 2024» gruppekode FWWCU. Det er begrenset antall plasser (45) og førstemann til mølla gjelder. Det blir ventelisteordning i Spond. Påmeldingen er bindende* og betalingen skjer direkte i Spond ved påmelding. I tillegg må du fylle ut skjema før 1. februar. Påmeldingen er ikke fullstendig før skjema er fyllt ut, og dersom dette ikke skjer innen fristen går plassen videre til neste person på en evt. venteliste.
 
 **\*** Det blir i utgangspunktet ikke gitt refusjon ved avmelding. Ta kontakt dersom det oppstår noe som gjør at du trenger å revurdere din påmelding
 
