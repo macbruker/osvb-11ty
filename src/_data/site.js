@@ -15,7 +15,7 @@ export default {
         {
             title: 'Treninger',
             description: 'Grupper, nivåer, priser',
-            url: ''
+            url: '/treninger/'
         },
         {
             title: 'Turneringer',
@@ -25,7 +25,7 @@ export default {
         {
             title: 'Booking',
             description: 'Retningslinjer og priser for baneleie',
-            url: ''
+            url: '/booking/'
         },
         {
             title: 'Om klubben',

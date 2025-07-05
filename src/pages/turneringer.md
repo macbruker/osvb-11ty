@@ -4,7 +4,7 @@ description: 'Det du trenger å vite om våre nasjonale, regionale og andre sosi
 permalink: '/turneringer/'
 layout: default.njk
 eleventyNavigation:
-  key: Menu
+  key: Turneringer
 ---
 
 

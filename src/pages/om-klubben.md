@@ -4,7 +4,7 @@ description: 'Oslo Sandvolleyballklubb organiserer turneringer og treninger for 
 permalink: '/om-klubben/'
 layout: default.njk
 eleventyNavigation:
-  key: Footer
+  key: Om Klubben
 ---
 
 Vi har som mål å legge til rette for et voksende sandvolleyballmiljø i Oslo. Vi brenner for å organisere [turneringer](#) og [treninger](#) for både etablerte spillere og nybegynnere, som vil ha et morsomt og sosialt forhold til en flott idrett!
