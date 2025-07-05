@@ -40,6 +40,7 @@ export default function(eleventyConfig) {
     // Directory configuration
     return {
         pathPrefix: "osvb-11ty",
+        markdownTemplateEngine: "njk",
         dir: {
             input: 'src',
             includes: 'templates',
