@@ -519,6 +519,13 @@ summary:before {
     font-size: 1.25em;
     font-weight: 800;
     color: currentColor;
+    text-decoration-line: underline;
+    text-underline-offset: 0.125em;
+    text-decoration-color: var(--color-blue);
+}
+
+.panel a:hover {
+    text-decoration-color: var(--color-pink);
 }
 
 .panel span {
@@ -948,12 +955,13 @@ a.kicker:hover {
     font-stretch: condensed;
     color: currentColor;
     margin-block-end: 0;
-}
-
-.event-listing a:hover {
     text-decoration-line: underline;
     text-underline-offset: 0.125em;
     text-decoration-color: var(--color-blue);
+}
+
+.event-listing a:hover {
+    text-decoration-color: var(--color-pink);
 }
 
 .event-listing a:before,
