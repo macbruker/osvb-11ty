@@ -2,7 +2,7 @@
 title: Turneringer
 description: 'Det du trenger å vite om våre nasjonale, regionale og andre sosiale turneringer.'
 permalink: '/turneringer/'
-layout: post.njk
+layout: default.njk
 eleventyNavigation:
   key: Menu
 ---

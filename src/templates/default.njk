@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+
+{% set parentPage = collections.all | eleventyNavigationBreadcrumb(title, { allowMissing: true }) | eleventyNavigation %}
+
+
+<h1 class="title ">
+  {% if showParent %}
+    {% for entry in parentPage %}
+      <a href="{{ entry.url }}">{{ entry.title }}</a>
+    {% endfor %}
+    &rsaquo;
+  {% endif %}
+  {{ title }}
+</h1>
+
+{% if media %}
+<div class="thumbnail">
+  <img src="{{ media }}" eleventy:widths="360, 640" alt="">
+</div>
+{% endif %}
+
+<div class="ingress">
+  <p>{{ description | safe }}</p>
+</div>
+
+{{ content | safe }}
+
+<aside class="aside"></aside>

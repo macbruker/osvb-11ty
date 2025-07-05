@@ -2,7 +2,7 @@
 title: Om klubben
 description: 'Oslo Sandvolleyballklubb organiserer turneringer og treninger for nybegynnere, etablerte og proffe spillere som vil ha et morsomt og sosialt forhold til sandvolleyball.'
 permalink: '/om-klubben/'
-layout: post.njk
+layout: default.njk
 eleventyNavigation:
   key: Footer
 ---
