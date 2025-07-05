@@ -32,5 +32,6 @@ export default {
             description: 'Historien, styret og kontaktpersoner',
             url: '/om-klubben/'
         }
-    ]
+    ],
+    year: new Date().getFullYear()
 }
