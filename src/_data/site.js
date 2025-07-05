@@ -20,7 +20,7 @@ export default {
         {
             title: 'Turneringer',
             description: 'Formater, lisenser og regler',
-            url: ''
+            url: '/turneringer/'
         },
         {
             title: 'Booking',
