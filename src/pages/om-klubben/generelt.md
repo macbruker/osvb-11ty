@@ -8,7 +8,7 @@ eleventyNavigation:
   key: Om klubben
 ---
 
-Vi har som mål å legge til rette for et voksende sandvolleyballmiljø i Oslo. Vi brenner for å organisere [turneringer](#) og [treninger](#) for både etablerte spillere og nybegynnere, som vil ha et morsomt og sosialt forhold til en flott idrett!
+Vi har som mål å legge til rette for et voksende sandvolleyballmiljø i Oslo. Vi brenner for å organisere [turneringer](#) og [treninger](#) for både etablerte spillere og nybegynnere. Alle som vil ha et morsomt og sosialt forhold til en flott idrett!
 
 {% set subpages = collections.all | eleventyNavigation("Om klubben")| sort(false, false, "data.order") %}
 
@@ -19,6 +19,9 @@ Vi har som mål å legge til rette for et voksende sandvolleyballmiljø i Oslo. 
   </li>
 {% endfor %}
 </ul>
+
+## Vi ser etter flere som vil bidra
+Hvor mange OSVB-ere trenger du for å organisere et stadig bedre tilbud til en stadig større klubb? Ikke vet vi, men vi vet at vi aldri kan få for mange flinke folk! Dette er [noe av det du kan bidra med](#).
 
 <!-- <article class="teaser">
   <div>
