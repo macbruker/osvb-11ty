@@ -4,13 +4,14 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 
 import { markdownItTable } from "markdown-it-table";
-import { dateFormat } from "./src/_11ty/filters.js";
+import { dateFormat, markdownInline } from "./src/_11ty/filters.js";
 
-export default function(eleventyConfig) {
+export default function(eleventyConfig) {   
+    eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItTable));
+
     // Human readable date filters
     eleventyConfig.addFilter("dateFormat", dateFormat);
-
-	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItTable));
+    eleventyConfig.addFilter("markdownInline", markdownInline);
 
     // Copy files to build folder
     eleventyConfig.addPassthroughCopy({ "src/assets/fonts" : "assets"});
