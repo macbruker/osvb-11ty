@@ -16,14 +16,18 @@ eleventyNavigation:
 
 <small>Oppdatert 1. mars 2025</small>
 
-**Styreleder:** Stine Schjødt-Osmo  
-**Nestleder:** Håkon Tveitan
+## Styreleder
+Stine Schjødt-Osmo
 
-**Styremedlemmer:**  
-Bendik Gabriel Huus  
-Torbjørn Nordli  
-Marit Ribe Øverby  
-Ruben Løvli  
-Svanhild Remme  
-Helga Lindheim  
-Pål Tanggaard (vara)  
+## Nestleder
+Håkon Tveitan
+
+## Styremedlemmer
+
+* Bendik Gabriel Huus
+* Torbjørn Nordli
+* Marit Ribe Øverby
+* Ruben Løvli
+* Svanhild Remme
+* Helga Lindheim
+* Pål Tanggaard (vara)
