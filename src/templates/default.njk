@@ -4,11 +4,9 @@ layout: base.njk
 
 {% if showParent %}
   {% set navPages = collections.all | eleventyNavigationBreadcrumb(title) %}
-  <div class="kicker">
-    {% for item in navPages %}   
-      <a href="{{ item.url }}">{{ item.title }}</a>
-    {% endfor %}
-  </div>
+  {% for item in navPages %}   
+    <a class="kicker" href="{{ item.url }}">{{ item.title }}</a>
+  {% endfor %}
 {% endif %}
 
 <h1 class="title ">
