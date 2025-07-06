@@ -10,7 +10,7 @@ export default {
         {
             title: 'Ukeplan',
             description: 'Oversikt over faste aktiviteter',
-            url: ''
+            url: '/ukeplan/'
         },
         {
             title: 'Treninger',
@@ -33,5 +33,6 @@ export default {
             url: '/om-klubben/'
         }
     ],
-    year: new Date().getFullYear()
+    year: new Date().getFullYear(),
+    weekday: new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date())
 }
