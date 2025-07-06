@@ -49,6 +49,10 @@
     interpolate-size: allow-keywords;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 html {
     font-family: 'Noto Sans', system-ui, sans-serif;
     font-optical-sizing: auto;
