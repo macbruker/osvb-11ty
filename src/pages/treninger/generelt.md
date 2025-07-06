@@ -15,7 +15,7 @@ Treningstilbudet vårt er delt inn i følgende målgrupper:
 {% for entry in subpages %}
   <li class="panel">
     <a href="{{ entry.url }}">{{ entry.title }}</a>
-    <span>({{ entry.excerpt }})</span>
+    <span>{{ entry.excerpt }}</span>
   </li>
 {% endfor %}
 </ul>

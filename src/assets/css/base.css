@@ -70,13 +70,16 @@ h4 {
     font-size: 1em;
     font-weight: 800;
 }
+:where(h2,h3,h4) + :is(h2,h3,h4) {
+    margin-block-start: 0.5lh;
+}
 
 :where(p, ul, ol, dl) {
-    margin-block: 0.5lh 0;
+    margin-block: 0.125lh 0;
 }
 
 :where(dl, ul, ol):not([class]) :where(div + div, li + li) {
-    margin-block-start: 0.5lh;
+    margin-block-start: 0.375lh;
 }
 
 ul:not([class]) {
@@ -126,6 +129,7 @@ figure {
 img {
     max-inline-size: 100%;
     block-size: auto;
+    object-fit: cover;
 }
 
 button {
