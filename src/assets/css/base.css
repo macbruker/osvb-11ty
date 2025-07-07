@@ -35,8 +35,6 @@ html {
 
 * {
     box-sizing: inherit;
-    text-underline-offset: 0.1lh;
-    text-decoration-thickness: 1.5px;
 }
 
 body {
@@ -110,7 +108,16 @@ strong {
 }
 
 a {
-    color: var(--color-blue);
+    color: var(--color-night);
+    text-decoration-color: var(--color-blue);
+    text-underline-offset: 0.1lh;
+    text-decoration-thickness: 0.125ch;
+}
+
+a:hover {
+    text-decoration-color: var(--color-pink);
+    text-underline-offset: 0.125lh;
+    text-decoration-thickness: 0.15ch;
 }
 
 dl {
