@@ -19,7 +19,7 @@ layout: 'base.njk'
   <div class="side-scroll">
     <div class="posts">
       <div></div>
-      {% for post in collections.post %}
+      {% for post in collections.post | sort(false, false, "data.date") | reverse %}
         <article class="polaroid">
           <img src="{{ post.data.media }}" eleventy:widths="360" alt="">
           <a href="{{ post.url }}">{{ post.data.title }}</a>
