@@ -65,8 +65,6 @@ html {
 
 * {
     box-sizing: inherit;
-    text-underline-offset: 0.1lh;
-    text-decoration-thickness: 1.5px;
 }
 
 body {
@@ -140,7 +138,16 @@ strong {
 }
 
 a {
-    color: var(--color-blue);
+    color: var(--color-night);
+    text-decoration-color: var(--color-blue);
+    text-underline-offset: 0.1lh;
+    text-decoration-thickness: 0.125ch;
+}
+
+a:hover {
+    text-decoration-color: var(--color-pink);
+    text-underline-offset: 0.125lh;
+    text-decoration-thickness: 0.15ch;
 }
 
 dl {
@@ -459,7 +466,7 @@ summary:before {
 :where(.menu) a:hover {
     text-decoration-line: underline;
     text-decoration-color: var(--color-blue);
-    text-decoration-thickness: 0.1ch;
+    text-decoration-thickness: 0.15ch;
 }
 
 
@@ -745,15 +752,7 @@ summary:before {
 }
 
 :where(.main--page) > p a {
-    color: var(--color-pink);
-    text-decoration-color: var(--color-pink);
-    letter-spacing: -0.025ch;
-    font-weight: 500;
-
-    &:hover {
-        text-decoration-color: var(--color-night-faded);
-        color: var(--color-blue);
-    }
+    font-weight: 600;
 }
 
 
@@ -850,7 +849,6 @@ a.kicker:hover {
 .teaser a {
     color: currentColor;
     text-decoration: underline;
-    text-decoration-thickness: 2px;
     text-decoration-color: var(--color-blue);
 }
 
@@ -949,18 +947,10 @@ a.kicker:hover {
 
 .event-listing a {
     font-size: 1.125em;
-    text-decoration: none;
     font-weight: 700;
     font-stretch: condensed;
     color: currentColor;
     margin-block-end: 0;
-    text-decoration-line: underline;
-    text-underline-offset: 0.125em;
-    text-decoration-color: var(--color-blue);
-}
-
-.event-listing a:hover {
-    text-decoration-color: var(--color-pink);
 }
 
 .event-listing a:before,
