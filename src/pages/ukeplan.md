@@ -7,7 +7,7 @@ eleventyNavigation:
   key: Ukeplan
 ---
 
-Kommende turneringer og andre arrangementer finner du i [kalenderen](/kalender/).
+Kommende turneringer og arrangementer finner du i [kalenderen](/kalender/).
 
 <div class="schedule">
   {%- for day in schedule -%}
