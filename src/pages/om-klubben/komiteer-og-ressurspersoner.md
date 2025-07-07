@@ -29,7 +29,7 @@ Stine Schjødt-Osmo og Hilde Naas Rødseth
 Kristian Trydal  
 
 ### Turneringsledere
-Vilde Barth, Stine Schjødt Osmo, Vera Garberg, Isabel Augustinussen, Elisabeth Hasund, Guro Seternes
+Vilde Barth, Stine Schjødt Osmo, Vera Garberg, Isabel Augustinussen, Elisabeth Hasund og Guro Seternes
 
 ## Sponsorarbeid
 
