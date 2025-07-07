@@ -42,11 +42,12 @@
 
 .logo {
     display: inline-block;
-    margin-inline-start: -0.125em;
+    margin-inline-start: -0.375em;
+    transition: margin-inline-start linear 100ms;
     flex-shrink: 0;
 
-    @media (width > 800px) {
-        margin-inline-start: -2.3125em;
+    @media (width > 560px) {
+        margin-inline-start: -1.875em;
     }
 }
 
@@ -56,12 +57,8 @@
 
 .logo svg {
     fill: color(--color-white);
-    inline-size: 100%;
+    inline-size: min(10em, 100%);
     block-size: 100%;
-
-    @media (width > 640px) {
-        inline-size: 10em;
-    }
 }
 
 
@@ -159,7 +156,7 @@
     list-style: none;
     padding-inline-start: 0;
     margin-block-end: 4em;
-    columns: 32ch 2;
+    columns: 20ch 2;
     gap: 4ch;
  }
 
@@ -174,7 +171,7 @@
     display: block;
     color: currentColor;
     text-decoration: none;
-    font-size: clamp(1.25rem, 0.5rem + 2.5vw, 2rem);
+    font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
     font-stretch: 62.5%;
     font-weight: 400;
     padding-block: 0.5em;
@@ -196,11 +193,6 @@
     text-decoration-color: var(--color-blue);
     text-decoration-thickness: 0.1ch;
 }
-
-
-
-
-
 
 
 
@@ -485,14 +477,14 @@
 }
 
 :where(.main--page) > p a {
-    color: var(--color-blue);
-    text-decoration-color: var(--color-night);
+    color: var(--color-pink);
+    text-decoration-color: var(--color-pink);
     letter-spacing: -0.025ch;
     font-weight: 500;
 
     &:hover {
-        text-decoration-color: var(--color-pink);
-        color: var(--color-pink);
+        text-decoration-color: var(--color-night-faded);
+        color: var(--color-blue);
     }
 }
 
@@ -503,6 +495,7 @@
     margin-block-end: .25lh;
     font-stretch: semi-condensed;
     inline-size: fit-content;
+    text-indent: -0.25ch;
 }
 
 a.kicker {
@@ -524,18 +517,18 @@ a.kicker:hover {
 
 .thumbnail {
     position: relative;
-    aspect-ratio: 7/8;
+    aspect-ratio: 8/9;
     background-color: var(--color-white);
     border-radius: 0.125rem;
     box-shadow: 0 12px 24px -16px rgb(0 0 0 / 0.25);
     padding: 0.75rem;
     transform-origin: 50% 50%;
     z-index: 10;
-    max-inline-size: 48ch;
+    max-inline-size: 36ch;
+    rotate: -1.5deg;
 
-    @media (width > 1024px) {
-        margin: -0.75lh -14ch 1.5lh 3ch;
-        rotate: -2.5deg;
+    @media (width > 800px) {
+        margin: 0 calc(var(--edge-neg) - 3ch) 1lh 3ch;
         float: right;
     }
 }
@@ -797,45 +790,53 @@ a.kicker:hover {
 
 .schedule {
     display: grid;
-    gap: 0.125em;
 }
 .schedule :where(p, summary) {
     margin-block: 0;
 }
-.schedule :where(details) {
+.schedule :where(details):not(:open) {
+    border-block-end: 1px solid var(--color-night-20);
+}
+.schedule :where(details):not(:open):first-of-type {
+    border-block-start: 1px solid var(--color-night-20);
+}
+.schedule :where(details):open {
+    outline: 2px solid var(--color-white);
     background-color: var(--color-white);
     border-radius: 0.25em;
-}
-.schedule details:first-of-type {
-    border-radius: 0.5em 0.5em 0.25em 0.25em;
-}
-.schedule details:last-of-type {
-    border-radius: 0.25em 0.25em 0.5em 0.5em;
+    margin-block-end: 0.25lh;
+    z-index: 1;
 }
 .schedule summary {
     font-size: 1.25em;
-    padding-inline: 1ch;
+    padding-inline: 0.5ch;
 }
 .schedule summary + * {
-    margin-block: 0.5lh 1lh;
-    padding-inline: 1ch 2ch;
+    margin-block-end: 1lh;
+    padding-inline: 0.5ch 2ch;
+}
+.schedule div + div {
+    margin-block-start: 1lh;
 }
 .schedule dt {
     background-color: var(--color-yellow);
     border-radius: 0.25em;
     padding: 0 0.25em;
     inline-size: fit-content;
-    margin-block-end: 0.25lh;
     font-stretch: semi-condensed;
     font-size: 0.875em;
 }
 .schedule dd {
-    border-block-start: 1px solid var(--color-night-10);
     display: grid;
     grid-template-columns: 1fr 8ch;
     align-items: baseline;
     justify-content: space-between;
-    padding: 0.125lh 0.375ch;
+    padding-block: 0.25lh;
+    column-gap: 2ch;
+    line-height: 1.4;
+}
+.schedule dd:not(:first-of-type) {
+    border-block-start: 1px solid var(--color-night-10);
 }
 .schedule dd p {
     grid-column: 1 / -1;

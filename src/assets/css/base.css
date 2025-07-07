@@ -35,7 +35,7 @@ html {
 
 * {
     box-sizing: inherit;
-    text-underline-offset: 0.2ch;
+    text-underline-offset: 0.1lh;
     text-decoration-thickness: 1.5px;
 }
 
@@ -198,7 +198,7 @@ summary {
     margin-inline-start: -28px;
     letter-spacing: -0.0125ch;
     display: inline-flex;
-    gap: 8px;
+    gap: 0.5ch;
 
     &:hover {
         color: var(--color-blue);
@@ -224,10 +224,10 @@ summary:before {
     flex-shrink: 0;
     place-items: center;
     place-self: baseline;
-    translate: 0 0.375em;
+    translate: 0 0.875ch;
     transition: rotate 150ms;
-    inline-size: 20px;
-    block-size: 20px;
+    inline-size: 18px;
+    block-size: 18px;
 }
 
 :where(details[open]) summary:before {
