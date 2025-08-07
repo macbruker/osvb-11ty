@@ -26,7 +26,8 @@
         "params": {
           "path": "/.mattrbld/collections/page.json"
         }
-      }
+      },
+      "showInDashboard": false
     },
     {
       "icon": "calendar",
@@ -36,7 +37,8 @@
         "params": {
           "path": "/.mattrbld/collections/event.json"
         }
-      }
+      },
+      "showInDashboard": false
     },
     {
       "icon": "document-stack",
@@ -46,7 +48,8 @@
         "params": {
           "path": "/.mattrbld/collections/post.json"
         }
-      }
+      },
+      "showInDashboard": false
     },
     {
       "separator": true
