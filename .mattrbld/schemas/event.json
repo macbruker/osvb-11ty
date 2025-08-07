@@ -61,76 +61,6 @@
       }
     },
     {
-      "type": "rich text",
-      "default": null,
-      "icon": "text",
-      "key": "content",
-      "label": "Content",
-      "localised": false,
-      "options": {
-        "outputFormat": "markdown",
-        "blockFormats": [
-          "blockquote",
-          "heading",
-          "hr",
-          "orderedList",
-          "unorderedList",
-          "image"
-        ],
-        "inlineFormats": [
-          "em",
-          "strong",
-          "link"
-        ],
-        "formatOptions": [
-          "allowQuoteFooters",
-          "allowNestedLists",
-          "allowImageCaptions"
-        ],
-        "inputRuleOptions": [
-          "autoquotes",
-          "dashes",
-          "ellipsis",
-          "noDoubleCaps",
-          "noDoubleSpace"
-        ],
-        "minHeading": 2,
-        "maxHeading": 4,
-        "codeLangs": [
-          "html",
-          "css",
-          "javascript",
-          "markdown"
-        ],
-        "allowRaw": false,
-        "urlTemplate": "",
-        "urlSuffix": "",
-        "linkOptions": [
-          "forceBlankTarget",
-          "allowExternal",
-          "allowInternal"
-        ]
-      },
-      "tab": "Content",
-      "validation": {
-        "enforceMinMax": true,
-        "max": null,
-        "min": null,
-        "regex": null,
-        "regexError": null,
-        "required": false,
-        "unit": "length"
-      },
-      "value": null,
-      "version": 1,
-      "visibility": {
-        "hidden": false,
-        "showByValue": {
-          "field": null
-        }
-      }
-    },
-    {
       "type": "group",
       "displayField": "date_start",
       "icon": "group",
@@ -201,6 +131,89 @@
           }
         }
       ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "separator",
+      "icon": "add-separator",
+      "key": "___mb_visual_separator",
+      "label": "Separator",
+      "tab": "Content",
+      "version": 2,
+      "visibility": {
+        "showByValue": {
+          "field": null
+        }
+      },
+      "visualOnly": true
+    },
+    {
+      "type": "rich text",
+      "default": null,
+      "icon": "text",
+      "key": "content",
+      "label": "Content",
+      "localised": false,
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList",
+          "image"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists",
+          "allowImageCaptions"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
+        "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
+        "linkOptions": [
+          "allowExternal",
+          "allowInternal"
+        ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
       "version": 1,
       "visibility": {
         "hidden": false,

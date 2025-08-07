@@ -1,12 +1,14 @@
 {
   "autoquotes": null,
-  "brandColors": [],
-  "corsProxy": "http://localhost:9999",
-  "name": "osvb-11ty",
-  "sidebar": [
+  "brandColors": [
     {
-      "separator": true
-    },
+      "label": "OSVB",
+      "value": "rgb(0, 153, 204)"
+    }
+  ],
+  "corsProxy": "http://localhost:9999",
+  "name": "OSVB-11ty",
+  "sidebar": [
     {
       "label": "Dashboard",
       "icon": "globe",
@@ -16,12 +18,12 @@
       "protected": true
     },
     {
-      "icon": null,
-      "label": "Menu",
-      "target": null
+      "separator": true
     },
     {
-      "separator": true
+      "icon": null,
+      "label": "Pages & Collections",
+      "target": null
     },
     {
       "icon": null,
