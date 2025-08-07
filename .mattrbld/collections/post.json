@@ -6,7 +6,7 @@
   "disablePreview": false,
   "draftByDefault": false,
   "schemas": [
-    "/.mattrbld/schemas/Post.json"
+    "/.mattrbld/schemas/post.json"
   ],
   "linkable": false,
   "maxSize": null,

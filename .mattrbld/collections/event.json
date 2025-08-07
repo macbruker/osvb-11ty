@@ -6,7 +6,7 @@
   "disablePreview": false,
   "draftByDefault": false,
   "schemas": [
-    "/.mattrbld/schemas/Event.json"
+    "/.mattrbld/schemas/event.json"
   ],
   "linkable": false,
   "maxSize": null,

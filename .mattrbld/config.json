@@ -24,7 +24,7 @@
       "target": {
         "name": "Project.Collection",
         "params": {
-          "path": "/.mattrbld/collections/Page.json"
+          "path": "/.mattrbld/collections/page.json"
         }
       }
     },
@@ -34,7 +34,7 @@
       "target": {
         "name": "Project.Collection",
         "params": {
-          "path": "/.mattrbld/collections/Event.json"
+          "path": "/.mattrbld/collections/event.json"
         }
       }
     },
@@ -44,7 +44,7 @@
       "target": {
         "name": "Project.Collection",
         "params": {
-          "path": "/.mattrbld/collections/Post.json"
+          "path": "/.mattrbld/collections/post.json"
         }
       }
     },
