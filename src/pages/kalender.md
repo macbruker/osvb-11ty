@@ -17,7 +17,7 @@ eleventyNavigation:
 {%- for month, events in collections.event | groupby("data.month") -%}
     <h2>{{ month | dateFormat('LLLL') | capitalize }}</h2>
     <ul class="events">
-    {% for event in events | sort(false, false, "data.date") %}
+    {%- for event in events | sort(false, false, "data.date") -%}
         <li class="event-listing">
             <time class="cal-day" datetime="{{ event.data.date_start }}">
                 <span>{{ event.data.date_start | dateFormat('ccc') | replace('.', '') }}</span>
@@ -26,7 +26,7 @@ eleventyNavigation:
             <a href="{{ event.url }}">{{ event.data.title | safe }}</a>
             <p>Bane {{ event.data.court }}</p>
         </li>
-    {% endfor %}
+    {%- endfor -%}
     </ul>
 {% endfor %}
 
