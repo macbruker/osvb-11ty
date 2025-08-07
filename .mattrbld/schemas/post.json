@@ -35,13 +35,13 @@
       "default": null,
       "icon": "text-input",
       "key": "description",
-      "label": "Description",
+      "label": "Page Description",
       "localised": false,
       "options": {
         "wrapping": true,
         "multiline": false
       },
-      "tab": "Content",
+      "tab": "SEO",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -194,6 +194,10 @@
     },
     {
       "label": "Settings",
+      "groupAs": null
+    },
+    {
+      "label": "SEO",
       "groupAs": null
     }
   ]
