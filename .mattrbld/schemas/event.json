@@ -18,7 +18,7 @@
         "min": null,
         "regex": null,
         "regexError": null,
-        "required": false,
+        "required": true,
         "unit": "length"
       },
       "value": null,
@@ -86,7 +86,7 @@
           "validation": {
             "max": null,
             "min": null,
-            "required": false,
+            "required": true,
             "unit": "date",
             "isString": true
           },
@@ -165,7 +165,6 @@
         "blockFormats": [
           "blockquote",
           "heading",
-          "hr",
           "orderedList",
           "unorderedList",
           "image"
@@ -180,13 +179,7 @@
           "allowNestedLists",
           "allowImageCaptions"
         ],
-        "inputRuleOptions": [
-          "autoquotes",
-          "dashes",
-          "ellipsis",
-          "noDoubleCaps",
-          "noDoubleSpace"
-        ],
+        "inputRuleOptions": [],
         "minHeading": 2,
         "maxHeading": 4,
         "codeLangs": [
@@ -246,6 +239,33 @@
         "limitToRoles": [
           "dev"
         ]
+      }
+    },
+    {
+      "type": "reference",
+      "default": null,
+      "icon": "document-link",
+      "key": "reference",
+      "label": "Content Reference",
+      "localised": false,
+      "options": {
+        "collections": [
+          "/.mattrbld/collections/page.json"
+        ],
+        "field": "",
+        "removable": true
+      },
+      "tab": "Content",
+      "validation": {
+        "required": false
+      },
+      "value": null,
+      "version": 2,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
     }
   ],

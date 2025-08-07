@@ -18,7 +18,7 @@
         "min": null,
         "regex": null,
         "regexError": null,
-        "required": false,
+        "required": true,
         "unit": "length"
       },
       "value": null,
@@ -61,29 +61,24 @@
       }
     },
     {
-      "type": "file",
+      "type": "image",
       "default": null,
-      "icon": "attachment",
+      "icon": "image",
       "key": "media",
       "label": "Media",
-      "localised": false,
       "options": {
+        "resolutionHint": "",
         "removable": false,
-        "allowUpload": false,
-        "root": null,
-        "filetypes": [
-          "pdf",
-          "zip"
-        ]
+        "simple": false
       },
       "tab": "Content",
       "validation": {
         "max": null,
-        "required": false,
+        "required": true,
         "unit": "filesize (MB)"
       },
       "value": null,
-      "version": 2,
+      "version": 1,
       "visibility": {
         "hidden": false,
         "showByValue": {
@@ -101,9 +96,7 @@
       "options": {
         "outputFormat": "markdown",
         "blockFormats": [
-          "blockquote",
           "heading",
-          "hr",
           "orderedList",
           "unorderedList",
           "image"
@@ -111,20 +104,14 @@
         "inlineFormats": [
           "em",
           "strong",
-          "link"
+          "link",
+          "strike"
         ],
         "formatOptions": [
-          "allowQuoteFooters",
           "allowNestedLists",
           "allowImageCaptions"
         ],
-        "inputRuleOptions": [
-          "autoquotes",
-          "dashes",
-          "ellipsis",
-          "noDoubleCaps",
-          "noDoubleSpace"
-        ],
+        "inputRuleOptions": [],
         "minHeading": 2,
         "maxHeading": 4,
         "codeLangs": [
@@ -193,11 +180,11 @@
       "groupAs": null
     },
     {
-      "label": "Settings",
+      "label": "SEO",
       "groupAs": null
     },
     {
-      "label": "SEO",
+      "label": "Settings",
       "groupAs": null
     }
   ]

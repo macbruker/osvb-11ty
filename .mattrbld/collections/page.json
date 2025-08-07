@@ -12,6 +12,9 @@
   "maxSize": null,
   "permissions": {
     "everybody": [
+      "editContent"
+    ],
+    "owner": [
       "everything"
     ]
   },

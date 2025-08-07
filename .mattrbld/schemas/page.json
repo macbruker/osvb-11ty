@@ -50,36 +50,29 @@
       "value": null
     },
     {
-      "type": "file",
+      "type": "image",
       "default": null,
-      "icon": "attachment",
+      "icon": "image",
       "key": "media",
       "label": "Media",
-      "localised": false,
       "options": {
-        "removable": false,
-        "allowUpload": false,
-        "root": "/src/assets/images",
-        "filetypes": [
-          "pdf",
-          "zip",
-          "jpeg",
-          "png",
-          "jpg"
-        ]
+        "resolutionHint": "",
+        "removable": true,
+        "simple": false
       },
       "tab": "Content",
       "validation": {
-        "max": 1,
+        "max": 2,
         "required": false,
         "unit": "filesize (MB)"
       },
       "value": null,
-      "version": 2,
+      "version": 1,
       "visibility": {
         "hidden": false,
         "showByValue": {
-          "field": null
+          "field": null,
+          "value": true
         }
       }
     },
@@ -122,7 +115,7 @@
         "options": [
           {
             "label": "Default",
-            "value": "base.njk"
+            "value": "default.njk"
           },
           {
             "label": "Calendar",
@@ -148,20 +141,6 @@
       }
     },
     {
-      "type": "separator",
-      "icon": "add-separator",
-      "key": "___mb_visual_separator",
-      "label": "Separator",
-      "tab": "Settings",
-      "version": 2,
-      "visibility": {
-        "showByValue": {
-          "field": null
-        }
-      },
-      "visualOnly": true
-    },
-    {
       "type": "link",
       "default": null,
       "icon": "link",
@@ -169,7 +148,7 @@
       "label": "Permalink",
       "localised": false,
       "options": {
-        "type": "internal",
+        "type": "external",
         "byFilePath": false,
         "urlSuffix": "/",
         "urlTemplate": ""
@@ -257,7 +236,9 @@
           "visibility": {
             "hidden": false,
             "showByValue": {
-              "field": null
+              "field": "eleventyNavigation.key",
+              "value": "greater",
+              "comparator": 1
             }
           }
         },
@@ -287,7 +268,9 @@
           "visibility": {
             "hidden": false,
             "showByValue": {
-              "field": null
+              "field": "eleventyNavigation.key",
+              "value": "greater",
+              "comparator": 1
             }
           }
         }
@@ -296,7 +279,9 @@
       "visibility": {
         "hidden": false,
         "showByValue": {
-          "field": null
+          "field": null,
+          "value": "matches",
+          "comparator": ""
         }
       }
     },
@@ -312,7 +297,6 @@
         "blockFormats": [
           "blockquote",
           "heading",
-          "hr",
           "orderedList",
           "unorderedList",
           "image"
@@ -320,20 +304,15 @@
         "inlineFormats": [
           "em",
           "strong",
-          "link"
+          "link",
+          "strike"
         ],
         "formatOptions": [
           "allowQuoteFooters",
           "allowNestedLists",
           "allowImageCaptions"
         ],
-        "inputRuleOptions": [
-          "autoquotes",
-          "dashes",
-          "ellipsis",
-          "noDoubleCaps",
-          "noDoubleSpace"
-        ],
+        "inputRuleOptions": [],
         "minHeading": 2,
         "maxHeading": 4,
         "codeLangs": [
@@ -389,7 +368,7 @@
         "min": null,
         "regex": null,
         "regexError": null,
-        "required": true,
+        "required": false,
         "unit": "length"
       },
       "value": null,
@@ -397,7 +376,9 @@
       "visibility": {
         "hidden": false,
         "showByValue": {
-          "field": null
+          "field": "title",
+          "value": "equals",
+          "comparator": 404
         }
       }
     }
@@ -408,11 +389,11 @@
       "groupAs": null
     },
     {
-      "label": "Settings",
+      "label": "SEO",
       "groupAs": null
     },
     {
-      "label": "SEO",
+      "label": "Settings",
       "groupAs": null
     }
   ]

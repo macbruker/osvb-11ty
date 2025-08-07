@@ -18,6 +18,20 @@
       "protected": true
     },
     {
+      "icon": "rows",
+      "label": "Menu",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/menu.json"
+        }
+      },
+      "limitToRoles": [
+        "owner",
+        "dev"
+      ]
+    },
+    {
       "separator": true
     },
     {

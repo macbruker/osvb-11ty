@@ -1,15 +1,20 @@
 {
   "allowedTypes": null,
-  "defaultFilename": null,
-  "dir": null,
+  "defaultFilename": "collection",
+  "dir": "/src/menu",
   "disableComments": false,
   "disablePreview": false,
   "draftByDefault": false,
-  "schemas": [],
+  "schemas": [
+    "/.mattrbld/schemas/menu.json"
+  ],
   "linkable": false,
   "maxSize": null,
   "permissions": {
     "everybody": [
+      "createContent"
+    ],
+    "owner": [
       "everything"
     ]
   },

@@ -12,7 +12,9 @@
   "maxSize": null,
   "permissions": {
     "everybody": [
-      "everything"
+      "createContent",
+      "editContent",
+      "deleteContent"
     ]
   },
   "type": "md",
