@@ -1,0 +1,18 @@
+{
+  "allowedTypes": null,
+  "defaultFilename": null,
+  "dir": null,
+  "disableComments": false,
+  "disablePreview": false,
+  "draftByDefault": false,
+  "schemas": [],
+  "linkable": false,
+  "maxSize": null,
+  "permissions": {
+    "everybody": [
+      "everything"
+    ]
+  },
+  "type": "json",
+  "urlTemplate": ""
+}
