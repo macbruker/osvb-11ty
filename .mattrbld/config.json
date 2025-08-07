@@ -1,0 +1,113 @@
+{
+  "autoquotes": null,
+  "brandColors": [],
+  "corsProxy": "http://localhost:9999",
+  "name": "osvb-11ty",
+  "sidebar": [
+    {
+      "label": "The sidebar has not yet been configured for this project"
+    },
+    {
+      "icon": "wrench-and-driver",
+      "label": "Configure now",
+      "target": {
+        "name": "Project.Settings",
+        "query": {
+          "tab": "sidebar"
+        }
+      },
+      "onlyPrivileged": true
+    },
+    {
+      "separator": true
+    },
+    {
+      "label": "Dashboard",
+      "icon": "grid",
+      "target": {
+        "name": "Project"
+      },
+      "protected": true
+    },
+    {
+      "separator": true
+    },
+    {
+      "icon": null,
+      "label": "Collections",
+      "target": null
+    },
+    {
+      "icon": "calendar",
+      "label": "Events",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/event.json"
+        }
+      }
+    },
+    {
+      "icon": "document-stack",
+      "label": "Posts",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/post.json"
+        }
+      }
+    },
+    {
+      "separator": true
+    },
+    {
+      "icon": null,
+      "label": "Menu",
+      "target": null
+    },
+    {
+      "label": "Media Library",
+      "icon": "image-stack",
+      "target": {
+        "name": "Project.MediaLibrary"
+      },
+      "protected": true
+    },
+    {
+      "separator": true
+    },
+    {
+      "label": "Settings",
+      "icon": "settings",
+      "target": {
+        "name": "Project.Settings"
+      },
+      "onlyPrivileged": true,
+      "protected": true
+    },
+    {
+      "icon": null,
+      "label": "Pages",
+      "target": null
+    }
+  ],
+  "slugifyOptions": {
+    "lowercase": true
+  },
+  "customRoles": [],
+  "draftsDir": null,
+  "previewUrl": null,
+  "languages": [],
+  "media": {
+    "advanced": false,
+    "customFields": null,
+    "dir": "/src/assets/images",
+    "maxSize": null,
+    "outputPath": null,
+    "permissions": {
+      "everybody": [
+        "upload"
+      ]
+    }
+  }
+}
