@@ -1,0 +1,94 @@
+{
+  "fields": [
+    {
+      "type": "rows",
+      "default": null,
+      "icon": "rows",
+      "key": "item",
+      "label": "Item",
+      "options": {
+        "compact": false,
+        "allowEditing": true,
+        "itemLabel": "Item"
+      },
+      "tab": "Items",
+      "validation": {
+        "max": null,
+        "min": null,
+        "unit": "rows"
+      },
+      "value": [
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "text",
+          "label": "Title",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "tab": "Items",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "reference",
+          "default": null,
+          "icon": "document-link",
+          "key": "link",
+          "label": "Link",
+          "localised": false,
+          "options": {
+            "collections": [
+              "/.mattrbld/collections/page.json"
+            ],
+            "field": "id",
+            "removable": false
+          },
+          "tab": "Items",
+          "validation": {
+            "required": true
+          },
+          "value": null,
+          "version": 2,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        }
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Items",
+      "groupAs": null
+    }
+  ]
+}

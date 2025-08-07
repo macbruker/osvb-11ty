@@ -16,6 +16,11 @@
       "protected": true
     },
     {
+      "icon": null,
+      "label": "Menu",
+      "target": null
+    },
+    {
       "separator": true
     },
     {
