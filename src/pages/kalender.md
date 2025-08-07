@@ -1,32 +1,10 @@
 ---
 title: 'Kalender'
 description: 'Alt du trenger å vite om de ulike turneringene og arrangementene  i Oslo sandvolleyballklubb.'
-layout: base.njk
+layout: calendar.njk
 permalink: '/kalender/index.html'
 eleventyNavigation:
   key: Kalender
 ---
 
-<div>
-    <h1 class="title ">{{ title }}</h1>
-    <p>{{ description | safe }}</p>
-</div>
-
-<p>Oversikt over faste aktiviter finner du i <a href="/ukeplan/">ukeplanen</a>.</p>
-
-{%- for month, events in collections.event | groupby("data.month") -%}
-    <h2>{{ month | dateFormat('LLLL') | capitalize }}</h2>
-    <ul class="events">
-    {%- for event in events | sort(false, false, "data.date") -%}
-        <li class="event-listing">
-            <time class="cal-day" datetime="{{ event.data.date_start }}">
-                <span>{{ event.data.date_start | dateFormat('ccc') | replace('.', '') }}</span>
-                <span>{{ event.data.date_stop | dateFormat('dd') }}</span>
-            </time>
-            <a href="{{ event.url }}">{{ event.data.title | safe }}</a>
-            <p>Bane {{ event.data.court }}</p>
-        </li>
-    {%- endfor -%}
-    </ul>
-{% endfor %}
-
+Oversikt over faste aktiviter finner du i [ukeplanen](/ukeplan/).
