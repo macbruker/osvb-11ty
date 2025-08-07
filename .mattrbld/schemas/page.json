@@ -31,34 +31,23 @@
       }
     },
     {
-      "type": "text",
-      "default": null,
-      "icon": "text-input",
-      "key": "description",
-      "label": "Description",
-      "localised": false,
+      "type": "heading",
+      "icon": "heading-spaced",
+      "key": "___mb_visual_heading",
+      "label": "Heading and description",
       "options": {
-        "wrapping": true,
-        "multiline": false
+        "heading": "Search Engine Optimization",
+        "description": "This helps users understand what the page is about when they use a search engine like Google or something similar"
       },
       "tab": "SEO",
-      "validation": {
-        "enforceMinMax": true,
-        "max": null,
-        "min": null,
-        "regex": null,
-        "regexError": null,
-        "required": true,
-        "unit": "length"
-      },
-      "value": null,
-      "version": 1,
+      "version": 2,
       "visibility": {
-        "hidden": false,
         "showByValue": {
           "field": null
         }
-      }
+      },
+      "visualOnly": true,
+      "value": null
     },
     {
       "type": "file",
@@ -121,32 +110,6 @@
       }
     },
     {
-      "type": "link",
-      "default": null,
-      "icon": "link",
-      "key": "permalink",
-      "label": "Permalink",
-      "localised": false,
-      "options": {
-        "type": "internal",
-        "byFilePath": false,
-        "urlSuffix": "/",
-        "urlTemplate": ""
-      },
-      "tab": "Settings",
-      "validation": {
-        "required": true
-      },
-      "value": null,
-      "version": 1,
-      "visibility": {
-        "hidden": false,
-        "showByValue": {
-          "field": null
-        }
-      }
-    },
-    {
       "type": "select",
       "default": null,
       "icon": "dropdown",
@@ -199,11 +162,51 @@
       "visualOnly": true
     },
     {
+      "type": "link",
+      "default": null,
+      "icon": "link",
+      "key": "permalink",
+      "label": "Permalink",
+      "localised": false,
+      "options": {
+        "type": "internal",
+        "byFilePath": false,
+        "urlSuffix": "/",
+        "urlTemplate": ""
+      },
+      "tab": "Settings",
+      "validation": {
+        "required": true
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "separator",
+      "icon": "add-separator",
+      "key": "___mb_visual_separator-1",
+      "label": "Separator",
+      "tab": "Settings",
+      "version": 2,
+      "visibility": {
+        "showByValue": {
+          "field": null
+        }
+      },
+      "visualOnly": true
+    },
+    {
       "type": "group",
-      "displayField": null,
+      "displayField": "key",
       "icon": "group",
       "key": "eleventyNavigation",
-      "label": "EleventyNavigation",
+      "label": "Navigation",
       "tab": "Settings",
       "value": [
         {
@@ -211,7 +214,7 @@
           "default": null,
           "icon": "text-input",
           "key": "key",
-          "label": "Key",
+          "label": "Menu Title",
           "localised": false,
           "options": {
             "wrapping": true,
@@ -248,6 +251,36 @@
             "max": null,
             "min": null,
             "required": false
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "parent",
+          "label": "Parent Page Title",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "tab": "Settings",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
           },
           "value": null,
           "version": 1,
@@ -327,6 +360,36 @@
         "regex": null,
         "regexError": null,
         "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "description",
+      "label": "Page Description",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "SEO",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
         "unit": "length"
       },
       "value": null,
