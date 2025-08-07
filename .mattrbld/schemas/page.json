@@ -1,0 +1,356 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "title",
+      "label": "Title",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "description",
+      "label": "Description",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "SEO",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "file",
+      "default": null,
+      "icon": "attachment",
+      "key": "media",
+      "label": "Media",
+      "localised": false,
+      "options": {
+        "removable": false,
+        "allowUpload": false,
+        "root": "/src/assets/images",
+        "filetypes": [
+          "pdf",
+          "zip",
+          "jpeg",
+          "png",
+          "jpg"
+        ]
+      },
+      "tab": "Content",
+      "validation": {
+        "max": 1,
+        "required": false,
+        "unit": "filesize (MB)"
+      },
+      "value": null,
+      "version": 2,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "id",
+      "icon": "hash",
+      "key": "id",
+      "label": "Unique ID",
+      "options": {
+        "type": "uuid",
+        "idTemplate": "",
+        "editable": false
+      },
+      "tab": "Settings",
+      "validation": {
+        "required": false
+      },
+      "value": null,
+      "version": 3,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        },
+        "limitToRoles": [
+          "dev"
+        ]
+      }
+    },
+    {
+      "type": "link",
+      "default": null,
+      "icon": "link",
+      "key": "permalink",
+      "label": "Permalink",
+      "localised": false,
+      "options": {
+        "type": "internal",
+        "byFilePath": false,
+        "urlSuffix": "/",
+        "urlTemplate": ""
+      },
+      "tab": "Settings",
+      "validation": {
+        "required": true
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "select",
+      "default": null,
+      "icon": "dropdown",
+      "key": "layout",
+      "label": "Layout",
+      "options": {
+        "filterable": false,
+        "removable": false,
+        "placeholder": "Select a value…",
+        "options": [
+          {
+            "label": "Default",
+            "value": "base.njk"
+          },
+          {
+            "label": "Calendar",
+            "value": "calendar.njk"
+          },
+          {
+            "label": "Schedule",
+            "value": "schedule.njk"
+          }
+        ]
+      },
+      "tab": "Settings",
+      "validation": {
+        "required": true
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "separator",
+      "icon": "add-separator",
+      "key": "___mb_visual_separator",
+      "label": "Separator",
+      "tab": "Settings",
+      "version": 2,
+      "visibility": {
+        "showByValue": {
+          "field": null
+        }
+      },
+      "visualOnly": true
+    },
+    {
+      "type": "group",
+      "displayField": null,
+      "icon": "group",
+      "key": "eleventyNavigation",
+      "label": "EleventyNavigation",
+      "tab": "Settings",
+      "value": [
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "key",
+          "label": "Key",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "tab": "Settings",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "number",
+          "default": null,
+          "icon": "number",
+          "key": "order",
+          "label": "Order",
+          "localised": false,
+          "tab": "Settings",
+          "validation": {
+            "max": null,
+            "min": null,
+            "required": false
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        }
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "rich text",
+      "default": null,
+      "icon": "text",
+      "key": "content",
+      "label": "Content",
+      "localised": false,
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList",
+          "image"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists",
+          "allowImageCaptions"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
+        "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
+        "linkOptions": [
+          "forceBlankTarget",
+          "allowExternal",
+          "allowInternal",
+          "useFilePath"
+        ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Content",
+      "groupAs": null
+    },
+    {
+      "label": "Settings",
+      "groupAs": null
+    },
+    {
+      "label": "SEO",
+      "groupAs": null
+    }
+  ]
+}

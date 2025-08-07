@@ -1,0 +1,249 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "title",
+      "label": "Title",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "court",
+      "label": "Courts",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "rich text",
+      "default": null,
+      "icon": "text",
+      "key": "content",
+      "label": "Content",
+      "localised": false,
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList",
+          "image"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists",
+          "allowImageCaptions"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
+        "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
+        "linkOptions": [
+          "forceBlankTarget",
+          "allowExternal",
+          "allowInternal"
+        ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "group",
+      "displayField": "date_start",
+      "icon": "group",
+      "key": "group",
+      "label": "Date & Time",
+      "tab": "Content",
+      "value": [
+        {
+          "type": "date",
+          "default": null,
+          "icon": "calendar",
+          "key": "date_start",
+          "label": "Start",
+          "options": {
+            "outputFormat": "iso",
+            "removable": false,
+            "showTime": true,
+            "defaultToNow": true,
+            "useAsUpdatedAt": false,
+            "only": "future"
+          },
+          "tab": "Content",
+          "validation": {
+            "max": null,
+            "min": null,
+            "required": false,
+            "unit": "date",
+            "isString": true
+          },
+          "value": null,
+          "version": 2,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "date",
+          "default": null,
+          "icon": "calendar",
+          "key": "date_stop",
+          "label": "Stop",
+          "options": {
+            "outputFormat": "iso",
+            "removable": false,
+            "showTime": true,
+            "defaultToNow": true,
+            "useAsUpdatedAt": false,
+            "only": "future"
+          },
+          "tab": "Content",
+          "validation": {
+            "max": null,
+            "min": null,
+            "required": false,
+            "unit": "date",
+            "isString": true
+          },
+          "value": null,
+          "version": 2,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        }
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "id",
+      "icon": "hash",
+      "key": "id",
+      "label": "Unique ID",
+      "options": {
+        "type": "uuid",
+        "idTemplate": "",
+        "editable": false
+      },
+      "tab": "Settings",
+      "validation": {
+        "required": true
+      },
+      "value": null,
+      "version": 3,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        },
+        "limitToRoles": [
+          "dev"
+        ]
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Content",
+      "groupAs": null
+    },
+    {
+      "label": "Settings",
+      "groupAs": null
+    }
+  ]
+}

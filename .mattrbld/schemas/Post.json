@@ -1,0 +1,200 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "title",
+      "label": "Title",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "description",
+      "label": "Description",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "file",
+      "default": null,
+      "icon": "attachment",
+      "key": "media",
+      "label": "Media",
+      "localised": false,
+      "options": {
+        "removable": false,
+        "allowUpload": false,
+        "root": null,
+        "filetypes": [
+          "pdf",
+          "zip"
+        ]
+      },
+      "tab": "Content",
+      "validation": {
+        "max": null,
+        "required": false,
+        "unit": "filesize (MB)"
+      },
+      "value": null,
+      "version": 2,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "rich text",
+      "default": null,
+      "icon": "text",
+      "key": "content",
+      "label": "Content",
+      "localised": false,
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList",
+          "image"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists",
+          "allowImageCaptions"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
+        "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
+        "linkOptions": [
+          "allowExternal",
+          "allowInternal"
+        ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "id",
+      "icon": "hash",
+      "key": "id",
+      "label": "Unique ID",
+      "options": {
+        "type": "uuid",
+        "idTemplate": "",
+        "editable": false
+      },
+      "tab": "Settings",
+      "validation": {
+        "required": true
+      },
+      "value": null,
+      "version": 3,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        },
+        "limitToRoles": [
+          "dev"
+        ]
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Content",
+      "groupAs": null
+    },
+    {
+      "label": "Settings",
+      "groupAs": null
+    }
+  ]
+}

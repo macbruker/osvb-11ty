@@ -1,0 +1,20 @@
+{
+  "allowedTypes": [],
+  "defaultFilename": null,
+  "dir": "/src/posts",
+  "disableComments": false,
+  "disablePreview": false,
+  "draftByDefault": false,
+  "schemas": [
+    "/.mattrbld/schemas/Post.json"
+  ],
+  "linkable": false,
+  "maxSize": null,
+  "permissions": {
+    "everybody": [
+      "everything"
+    ]
+  },
+  "type": "md",
+  "urlTemplate": ""
+}

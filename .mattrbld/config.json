@@ -5,25 +5,11 @@
   "name": "osvb-11ty",
   "sidebar": [
     {
-      "label": "The sidebar has not yet been configured for this project"
-    },
-    {
-      "icon": "wrench-and-driver",
-      "label": "Configure now",
-      "target": {
-        "name": "Project.Settings",
-        "query": {
-          "tab": "sidebar"
-        }
-      },
-      "onlyPrivileged": true
-    },
-    {
       "separator": true
     },
     {
       "label": "Dashboard",
-      "icon": "grid",
+      "icon": "globe",
       "target": {
         "name": "Project"
       },
@@ -34,8 +20,13 @@
     },
     {
       "icon": null,
-      "label": "Collections",
-      "target": null
+      "label": "Pages",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/page.json"
+        }
+      }
     },
     {
       "icon": "calendar",
@@ -62,7 +53,7 @@
     },
     {
       "icon": null,
-      "label": "Menu",
+      "label": "Assets",
       "target": null
     },
     {
@@ -83,18 +74,23 @@
         "name": "Project.Settings"
       },
       "onlyPrivileged": true,
-      "protected": true
-    },
-    {
-      "icon": null,
-      "label": "Pages",
-      "target": null
+      "protected": true,
+      "limitToRoles": [
+        "owner",
+        "dev"
+      ]
     }
   ],
   "slugifyOptions": {
     "lowercase": true
   },
-  "customRoles": [],
+  "customRoles": [
+    {
+      "label": "Developer",
+      "value": "developer",
+      "accessLevel": "dev"
+    }
+  ],
   "draftsDir": null,
   "previewUrl": null,
   "languages": [],
