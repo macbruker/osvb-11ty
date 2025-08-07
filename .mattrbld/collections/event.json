@@ -8,7 +8,7 @@
   "schemas": [
     "/.mattrbld/schemas/event.json"
   ],
-  "linkable": false,
+  "linkable": true,
   "maxSize": null,
   "permissions": {
     "everybody": [
