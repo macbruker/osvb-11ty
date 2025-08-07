@@ -38,6 +38,11 @@ export default function(eleventyConfig) {
         urlPath: '/assets/images/'
     });
 
+    eleventyConfig.setServerOptions({
+		port: 8090,
+    })
+
+
     // Directory configuration
     return {
         pathPrefix: "osvb-11ty",
