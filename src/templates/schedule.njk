@@ -10,12 +10,12 @@ layout: 'base.njk'
   {{ content | safe }}
 
 <div class="schedule">
-  {%- for day in schedule -%}
-    <details{{ ' open' if (day.day | lower) === site.weekday }}>
-      <summary>{{ day.day }}</summary>
-      {%- if day.events -%}       
+  {%- for day in collections.schedule -%}
+    <details{{ ' open' if (day.data.title | lower) === site.weekday }}>
+      <summary>{{ day.data.title }}</summary>
+      {%- if day.data.events -%}       
       <dl>
-        {%- for event in day.events -%}
+        {%- for event in day.data.events -%}
           <div>
           <dt>{{ event.timeslot }}</dt>
           {%- for group in event.groups -%}

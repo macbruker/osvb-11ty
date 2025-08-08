@@ -2,7 +2,7 @@
 title: Ukeplan
 description: 'Oversikt over faste aktiviteter gjennom uka.'
 permalink: '/ukeplan/'
-layout: schedule.njk
+layout: 'schedule.njk'
 eleventyNavigation:
   key: Ukeplan
 ---
