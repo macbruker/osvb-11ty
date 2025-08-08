@@ -62,6 +62,16 @@
       "showInDashboard": false
     },
     {
+      "icon": null,
+      "label": "Ukeplan",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/schedule.json"
+        }
+      }
+    },
+    {
       "icon": "document-stack",
       "label": "Posts",
       "target": {
