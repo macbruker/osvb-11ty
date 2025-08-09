@@ -83,11 +83,12 @@ h4 {
 
 h1 {
     font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+    font-weight: 900;
 }
 
 h2 {
     font-size: 1.5em;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: -0.05ch;
     font-stretch: semi-condensed;
 }
@@ -151,7 +152,7 @@ a:hover {
 }
 
 dl {
-    margin-block-start: 0.375em;
+    margin-block-start: 0.25lh;
 }
 
 dt {
@@ -317,12 +318,12 @@ summary:before {
 
 .logo {
     display: inline-block;
-    margin-inline-start: -0.375em;
+    margin-inline-start: -0.125em;
     transition: margin-inline-start linear 100ms;
     flex-shrink: 0;
 
     @media (width > 560px) {
-        margin-inline-start: -1.875em;
+        margin-inline-start: -2.125em;
     }
 }
 
@@ -331,8 +332,8 @@ summary:before {
 }
 
 .logo svg {
-    fill: color(--color-white);
-    inline-size: min(10em, 100%);
+    fill: var(--color-white);
+    inline-size: clamp(8.25rem, 7rem + 6.25vw, 11rem);
     block-size: 100%;
 }
 
@@ -416,7 +417,6 @@ summary:before {
     grid-column: container;
     inline-size: 100%;
     block-size: auto;
-    overflow: clip;
     transition: block-size 0.25s ease;
     z-index: 1;
 }
@@ -431,7 +431,7 @@ summary:before {
     list-style: none;
     padding-inline-start: 0;
     margin-block-end: 4em;
-    columns: 20ch 2;
+    columns: 24ch 2;
     gap: 4ch;
  }
 
@@ -449,18 +449,8 @@ summary:before {
     font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
     font-stretch: 62.5%;
     font-weight: 400;
-    padding-block: 0.5em;
+    padding-block: 0.5em 0.625em;
     text-shadow: 0 1px 2px rgb(0 0 0 / 0.5);
-}
-
-:where(.menu) a:hover {
-    text-decoration-line: underline;
-}
-
-:where(.menu) a:after {
-    content: "";
-    position: absolute;
-    inset: 0;
 }
 
 :where(.menu) a:hover {
@@ -469,7 +459,11 @@ summary:before {
     text-decoration-thickness: 0.15ch;
 }
 
-
+:where(.menu) a:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
 
 .main {
     position: relative;
@@ -486,7 +480,7 @@ summary:before {
     background-color: var(--color-sand);
     color: var(--color-night-faded);
     grid-column: full;
-    padding: clamp(1.5rem, 0.2273rem + 6.3636vi, 5rem) var(--edge-pos) clamp(2.5rem, 1.2273rem + 6.3636vi, 6rem);
+    padding: clamp(1.5rem, 0.2273rem + 6.3636vi, 5rem) var(--edge-pos) clamp(4rem, 1.2273rem + 6.3636vi, 8rem);
     overflow-y: clip;
     border-radius: 1em;
     box-shadow: 0 10px 40px 10px var(--color-night-20);
@@ -921,8 +915,11 @@ a.kicker:hover {
     transform: translateZ(0);
     display: block;
     text-align: center;
+    transition: background-color 150ms ease;
 }
-
+.join a:hover {
+    background-color: var(--color-sand);
+}
 
 
 
@@ -1071,10 +1068,16 @@ a.kicker:hover {
 }
 .schedule summary + * {
     margin-block-end: 1lh;
-    padding-inline: 0.5ch 2ch;
+    margin-inline-end: 2ch;
 }
+
 .schedule div + div {
-    margin-block-start: 1lh;
+    border-block-start: 1px solid var(--color-night-20);
+    padding-block-start: 0.5lh;
+    margin-block-start: 0.5lh;
+}
+.schedule dl {
+    margin-block-start: 0;
 }
 .schedule dt {
     background-color: var(--color-yellow);
@@ -1090,11 +1093,13 @@ a.kicker:hover {
     align-items: baseline;
     justify-content: space-between;
     padding-block: 0.25lh;
+    padding-inline: 0.5ch;
+    border-radius: 0.25em;
     column-gap: 2ch;
     line-height: 1.4;
 }
-.schedule dd:not(:first-of-type) {
-    border-block-start: 1px solid var(--color-night-10);
+.schedule dd:nth-child(odd) {
+    background-color: var(--color-night-10);
 }
 .schedule dd p {
     grid-column: 1 / -1;
