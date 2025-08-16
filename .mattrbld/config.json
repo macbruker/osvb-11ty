@@ -79,10 +79,9 @@
       "icon": "document-stack",
       "label": "Turneringer",
       "target": {
-        "name": "Edit Content",
+        "name": "Project.Collection",
         "params": {
-          "collection": "page.json",
-          "path": "/src/pages/turneringer.md"
+          "path": "/.mattrbld/collections/turneringer.json"
         }
       }
     },
