@@ -18,41 +18,27 @@
       "protected": true
     },
     {
-      "icon": "rows",
-      "label": "Menu",
-      "target": {
-        "name": "Project.Collection",
-        "params": {
-          "path": "/.mattrbld/collections/menu.json"
-        }
-      },
-      "limitToRoles": [
-        "owner",
-        "dev"
-      ]
-    },
-    {
       "separator": true
     },
     {
       "icon": null,
-      "label": "Pages & Collections",
+      "label": "Collections",
       "target": null
     },
     {
-      "icon": null,
-      "label": "Pages",
+      "icon": "comment-stack",
+      "label": "Aktuelt",
       "target": {
         "name": "Project.Collection",
         "params": {
-          "path": "/.mattrbld/collections/page.json"
+          "path": "/.mattrbld/collections/post.json"
         }
       },
       "showInDashboard": false
     },
     {
       "icon": "calendar",
-      "label": "Events",
+      "label": "Arrangementer",
       "target": {
         "name": "Project.Collection",
         "params": {
@@ -62,7 +48,15 @@
       "showInDashboard": false
     },
     {
+      "separator": true
+    },
+    {
       "icon": null,
+      "label": "Pages",
+      "target": null
+    },
+    {
+      "icon": "columns-alt",
       "label": "Ukeplan",
       "target": {
         "name": "Project.Collection",
@@ -73,14 +67,45 @@
     },
     {
       "icon": "document-stack",
-      "label": "Posts",
+      "label": "Treninger",
       "target": {
         "name": "Project.Collection",
         "params": {
-          "path": "/.mattrbld/collections/post.json"
+          "path": "/.mattrbld/collections/treninger.json"
         }
-      },
-      "showInDashboard": false
+      }
+    },
+    {
+      "icon": "document-stack",
+      "label": "Turneringer",
+      "target": {
+        "name": "Edit Content",
+        "params": {
+          "collection": "page.json",
+          "path": "/src/pages/turneringer.md"
+        }
+      }
+    },
+    {
+      "icon": "calendar-add",
+      "label": "Booking",
+      "target": {
+        "name": "Edit Content",
+        "params": {
+          "collection": "pages.json",
+          "path": "/src/pages/booking.md"
+        }
+      }
+    },
+    {
+      "icon": "document-stack",
+      "label": "Om klubben",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/om-klubben.json"
+        }
+      }
     },
     {
       "separator": true

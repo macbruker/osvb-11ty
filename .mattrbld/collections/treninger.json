@@ -1,20 +1,17 @@
 {
   "allowedTypes": [],
   "defaultFilename": null,
-  "dir": "/src/pages",
+  "dir": "/src/pages/treninger",
   "disableComments": false,
   "disablePreview": false,
   "draftByDefault": false,
   "schemas": [
     "/.mattrbld/schemas/page.json"
   ],
-  "linkable": true,
+  "linkable": false,
   "maxSize": null,
   "permissions": {
     "everybody": [
-      "editContent"
-    ],
-    "owner": [
       "everything"
     ]
   },

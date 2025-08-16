@@ -1,23 +1,20 @@
 {
-  "allowedTypes": null,
-  "defaultFilename": "collection",
-  "dir": "/src/menu",
+  "allowedTypes": [],
+  "defaultFilename": null,
+  "dir": "/src/pages",
   "disableComments": false,
   "disablePreview": false,
   "draftByDefault": false,
   "schemas": [
-    "/.mattrbld/schemas/menu.json"
+    "/.mattrbld/schemas/page.json"
   ],
   "linkable": false,
   "maxSize": null,
   "permissions": {
     "everybody": [
-      "createContent"
-    ],
-    "owner": [
       "everything"
     ]
   },
-  "type": "json",
+  "type": "md",
   "urlTemplate": ""
 }
