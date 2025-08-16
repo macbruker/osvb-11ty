@@ -34,5 +34,6 @@ export default {
         }
     ],
     year: new Date().getFullYear(),
-    weekday: new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date())
+    weekday: new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date()),
+    daynumber: new Date().getDay()
 }

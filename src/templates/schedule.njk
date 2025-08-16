@@ -11,8 +11,11 @@ layout: 'base.njk'
 
 <div class="schedule">
   {%- for day in collections.schedule -%}
-    <details{{ ' open' if (day.data.title | lower) === site.weekday }}>
-      <summary>{{ day.data.title }}</summary>
+  <div class="schedule__day" id="{{ day.data.title | lower }}">
+    <h2 class="schedule__head" {{ 'aria-current=page' if (day.data.title | lower) === site.weekday }}>
+      <span>{{ day.data.title }}</span>
+    </h2>
+    <div class="schedule__body">
       {%- if day.data.events -%}       
       <dl>
         {%- for event in day.data.events -%}
@@ -20,19 +23,25 @@ layout: 'base.njk'
           <dt>{{ event.timeslot }}</dt>
           {%- for group in event.groups -%}
             <dd>
-              <span class="">{{ group.name }}</span><span class="sr-only">,</span> <span>Bane {{ group.court }}</span>
+              <b>{{ group.name }}</b> <span>på bane {{ group.court }}</span>
               {%- if group.info -%}
               <p><small>{{ group.info | markdownInline | safe }}</small></p>
               {%- endif -%}
             </dd>
           {%- endfor -%} 
-         </div>
+        </div>
         {%- endfor -%}
       </dl>
       {%- endif -%}
-      {%- if day.info -%}
-      <p>{{ day.info | markdownInline | safe }}</p>
+      {%- if day.data.info -%}
+      <p>{{ day.data.info | markdownInline | safe }}</p>
       {%- endif -%}
-    </details>
+    </div>
+  </div>
   {%- endfor -%}
 </div> 
+
+<script type="text/javascript">
+  const weekday = new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date())
+  document.querySelector('#' + weekday).scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'start' });
+</script>
