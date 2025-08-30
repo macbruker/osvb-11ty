@@ -1,6 +1,6 @@
 {
   "allowedTypes": [],
-  "defaultFilename": "datetime",
+  "defaultFilename": "date",
   "dir": "/posts",
   "disableComments": false,
   "disablePreview": false,
