@@ -14,13 +14,13 @@ export default function(eleventyConfig) {
     eleventyConfig.addFilter("markdownInline", markdownInline);
 
     // Copy files to build folder
-    eleventyConfig.addPassthroughCopy({ "_assets/fonts" : "assets"});
-    eleventyConfig.addPassthroughCopy({ "_assets/js" : "assets"});
-    eleventyConfig.addPassthroughCopy("_assets/images/sponsor-wall.webp");
-    eleventyConfig.addPassthroughCopy("_assets/images/favicon.webp");
+    eleventyConfig.addPassthroughCopy({ "assets/fonts" : "assets"});
+    eleventyConfig.addPassthroughCopy({ "assets/js" : "assets"});
+    eleventyConfig.addPassthroughCopy("assets/images/sponsor-wall.webp");
+    eleventyConfig.addPassthroughCopy("assets/images/favicon.webp");
 
     // Watch targets
-    eleventyConfig.addWatchTarget("./_assets/css/*.css");
+    eleventyConfig.addWatchTarget("./assets/css/*.css");
 
     // Plugins
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
