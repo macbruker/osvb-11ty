@@ -79,10 +79,10 @@
       "icon": "document-stack",
       "label": "Turneringer",
       "target": {
-        "name": "Project.Collection",
+        "name": "Edit Content",
         "params": {
-          "collection": "page.json",
-          "path": "/turneringer/turneringer.md"
+          "collection": "turneringer.json",
+          "path": "/turneringer/index.md"
         }
       }
     },
