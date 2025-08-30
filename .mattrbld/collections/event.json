@@ -1,7 +1,7 @@
 {
   "allowedTypes": [],
   "defaultFilename": "date",
-  "dir": "/src/events",
+  "dir": "/events",
   "disableComments": false,
   "disablePreview": false,
   "draftByDefault": false,

@@ -1,7 +1,7 @@
 {
   "allowedTypes": [],
   "defaultFilename": null,
-  "dir": "/src/posts",
+  "dir": "/posts",
   "disableComments": false,
   "disablePreview": false,
   "draftByDefault": false,

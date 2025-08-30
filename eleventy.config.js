@@ -4,7 +4,7 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 
 import { markdownItTable } from "markdown-it-table";
-import { dateFormat, markdownInline } from "./src/_11ty/filters.js";
+import { dateFormat, markdownInline } from "./_11ty/filters.js";
 
 export default function(eleventyConfig) {   
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItTable));
@@ -14,13 +14,13 @@ export default function(eleventyConfig) {
     eleventyConfig.addFilter("markdownInline", markdownInline);
 
     // Copy files to build folder
-    eleventyConfig.addPassthroughCopy({ "src/assets/fonts" : "assets"});
-    eleventyConfig.addPassthroughCopy({ "src/assets/js" : "assets"});
-    eleventyConfig.addPassthroughCopy("src/assets/images/sponsor-wall.webp");
-    eleventyConfig.addPassthroughCopy("src/assets/images/favicon.webp");
+    eleventyConfig.addPassthroughCopy({ "_assets/fonts" : "assets"});
+    eleventyConfig.addPassthroughCopy({ "_assets/js" : "assets"});
+    eleventyConfig.addPassthroughCopy("_assets/images/sponsor-wall.webp");
+    eleventyConfig.addPassthroughCopy("_assets/images/favicon.webp");
 
     // Watch targets
-    eleventyConfig.addWatchTarget("./src/assets/css/*.css");
+    eleventyConfig.addWatchTarget("./_assets/css/*.css");
 
     // Plugins
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -48,10 +48,10 @@ export default function(eleventyConfig) {
         pathPrefix: "osvb-11ty",
         markdownTemplateEngine: "njk",
         dir: {
-            input: 'src',
-            includes: 'templates',
+            input: '/',
+            includes: '_layouts',
             data: '_data',
-            output: 'build'
+            output: '_build'
         }
     }
 }

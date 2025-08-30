@@ -81,7 +81,8 @@
       "target": {
         "name": "Project.Collection",
         "params": {
-          "path": "/.mattrbld/collections/turneringer.json"
+          "collection": "page.json",
+          "path": "/turneringer/turneringer.md"
         }
       }
     },
@@ -92,7 +93,7 @@
         "name": "Edit Content",
         "params": {
           "collection": "pages.json",
-          "path": "/src/pages/booking.md"
+          "path": "/booking.md"
         }
       }
     },
@@ -155,7 +156,7 @@
   "media": {
     "advanced": false,
     "customFields": null,
-    "dir": "/src/assets/images",
+    "dir": "/assets/images",
     "maxSize": null,
     "outputPath": null,
     "permissions": {
