@@ -10,7 +10,7 @@ eleventyNavigation:
 
 Vi har som mål å legge til rette for et voksende sandvolleyballmiljø i Oslo. Vi brenner for å organisere [turneringer](#) og [treninger](#) for både etablerte spillere og nybegynnere. Alle som vil ha et morsomt og sosialt forhold til en flott idrett!
 
-{% set subpages = collections.all | eleventyNavigation("Om klubben")| sort(false, false, "data.order") %}
+{% set subpages = collections.all | eleventyNavigation("Om klubben") | sort(false, false, "data.order") %}
 
 <ul class="panellist">
 {% for entry in subpages %}

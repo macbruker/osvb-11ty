@@ -7,7 +7,7 @@ eleventyNavigation:
   key: Treninger
 ---
 
-{% set subpages = collections.all | eleventyNavigation("Treninger")| sort(false, false, "data.order") %}
+{% set subpages = collections.all | eleventyNavigation("Treninger") | sort(false, false, "data.order") %}
 
 Treningstilbudet vårt er delt inn i følgende målgrupper:
 
