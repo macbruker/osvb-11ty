@@ -1,6 +1,6 @@
 {
   "allowedTypes": [],
-  "defaultFilename": null,
+  "defaultFilename": "datetime",
   "dir": "/posts",
   "disableComments": false,
   "disablePreview": false,
@@ -18,5 +18,5 @@
     ]
   },
   "type": "md",
-  "urlTemplate": ""
+  "urlTemplate": "/posts/:date[year]-:date[month]-:date[day]-:title/"
 }
