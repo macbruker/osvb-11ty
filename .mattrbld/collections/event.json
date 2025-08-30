@@ -1,7 +1,7 @@
 {
   "allowedTypes": [],
   "defaultFilename": "date",
-  "dir": "/events",
+  "dir": "/kalender",
   "disableComments": false,
   "disablePreview": false,
   "draftByDefault": false,

@@ -156,7 +156,7 @@
   "media": {
     "advanced": false,
     "customFields": null,
-    "dir": "/assets/images",
+    "dir": "/_assets/images",
     "maxSize": null,
     "outputPath": null,
     "permissions": {
