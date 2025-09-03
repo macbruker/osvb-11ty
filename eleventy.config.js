@@ -48,7 +48,7 @@ export default function(eleventyConfig) {
         pathPrefix: "osvb-11ty",
         markdownTemplateEngine: "njk",
         dir: {
-            input: '/',
+            input: '',
             includes: '_layouts',
             data: '_data',
             output: '_build'

@@ -1,4 +1,4 @@
-import { dateFormat } from "../_11ty/filters.js"
+import { dateFormat } from "../../_11ty/filters.js"
 
 export default {
     layout: 'event.njk',

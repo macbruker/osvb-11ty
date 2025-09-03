@@ -2,7 +2,8 @@
 title: 'Kalender'
 description: 'Alt du trenger å vite om de ulike turneringene og arrangementene  i Oslo sandvolleyballklubb.'
 layout: calendar.njk
-permalink: '/kalender/index.html'
+permalink: '/kalender/'
+eleventyExcludeFromCollections: true
 eleventyNavigation:
   key: Kalender
 ---
