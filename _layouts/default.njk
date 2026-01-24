@@ -1,15 +1,13 @@
----
-layout: 'base.njk'
----
+{% extends "base.njk" %}
 
-{% if showParent %}
-  {% set navPages = collections.all | eleventyNavigationBreadcrumb(title) %}
-  {% for item in navPages %}   
-    <a class="kicker" href="{{ item.url }}">{{ item.title }}</a>
-  {% endfor %}
-{% endif %}
+{% block breadcrumbs %}
+  {% if parent %}
+    <div class="breadcrumbs">&larr; <a href="{{ parent.url }}">{{ parent.title }}</a></div>
+  {% endif %} 
+{% endblock %}
 
-<h1 class="title ">
+{% block content %}
+<h1 class="title">
   {{ title }}
 </h1>
 
@@ -19,8 +17,17 @@ layout: 'base.njk'
 </div>
 {% endif %}
 
+{% if showTags %}
+  <div class="tags">
+    {% for tag in tags | exclude('post') %}
+      <span>#{{ tag }}</span>
+    {% endfor %}
+  </div>
+{% endif %}
+
 <div class="ingress">
   <p>{{ description | safe }}</p>
 </div>
 
-{{ content | safe }}
+  {{ content | safe }}
+{% endblock %}

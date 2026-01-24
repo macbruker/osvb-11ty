@@ -1,4 +1,5 @@
 export default {
     layout: 'default.njk',
-    tags: ['post']
+    tags: ['post'],
+    showTags: true
 }

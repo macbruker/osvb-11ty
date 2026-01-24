@@ -1,36 +1,42 @@
----
-layout: 'base.njk'
----
+{% extends "base.njk" %}
 
-<a class="kicker" href="/kalender/">Kalender</a>
-<h1 class="title ">{{ title }}</h1>
+{% block breadcrumbs %}
+  {% if parent %}
+    <div class="breadcrumbs">&larr; <a href="{{ parent.url }}">{{ parent.title }}</a></div>
+  {% endif %} 
+{% endblock %}
 
-<dl class="event-data">
-    <div>
-        <dt>Dato</dt>
-        <dd>{{ date_start | dateFormat('DDDD') | capitalize }}</dd>
+
+
+{% block content %}  
+    <h1 class="title">{{ title }}</h1>
+
+    <dl class="event-data">
+        <div>
+            <dt>Dato</dt>
+            <dd>{{ date_start | dateFormat('DDDD') | capitalize }}</dd>
+        </div>
+        <div>
+            <dt>Tid</dt>
+            <dd>{{ date_start | dateFormat('T') | replace(':', '.') }}–{{ date_stop | dateFormat('T') | replace(':', '.') }}</dd>
+        </div>
+        <div>
+            <dt>Turneringsleder</dt>
+            <dd>Ola Nordmann</dd>
+        </div>
+        <div>
+            <dt>Bane</dt>
+            <dd>{{ court | safe }}</dd>
+        </div>
+    </dl>
+
+    {% if media %}
+    <div class="thumbnail">
+    <img src="{{ media }}" alt="">
     </div>
-    <div>
-        <dt>Tid</dt>
-        <dd>{{ date_start | dateFormat('T') | replace(':', '.') }}–{{ date_stop | dateFormat('T') | replace(':', '.') }}</dd>
-    </div>
-    <div>
-        <dt>Turneringsleder</dt>
-        <dd>Ola Nordmann</dd>
-    </div>
-    <div>
-        <dt>Bane</dt>
-        <dd>{{ court | safe }}</dd>
-    </div>
-</dl>
-
-{% if media %}
-<div class="thumbnail">
-  <img src="{{ media }}" alt="">
-</div>
-{% endif %}
+    {% endif %}
 
 
-{{ content | safe }}
-
+    {{ content | safe }}
+{% endblock %}
 <aside class="aside"></aside>

@@ -5,6 +5,10 @@ export default {
     tags: ['event'],
     eleventyComputed: {
         month: (data) => dateFormat(data.date_start, 'yyyy-LL'),
-        weekday: new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date())
+        weekday: new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date()),
+        parent: {
+            title: 'Kalender',
+            url: '/kalender/'
+        }
     }
 }

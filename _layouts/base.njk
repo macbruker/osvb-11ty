@@ -21,7 +21,18 @@
     {% if page.url != '/' %}{% include "partials/nav.njk" %}{% endif %}
 
     <main class="main {{ 'main--home grid-layout' if page.url === '/' else 'main--page' }}">
-    {{ content | safe }}
+
+      {% block breadcrumbs %}{% endblock %}
+
+        {% if page.url != '/' %}
+          <div class="prose">
+            {% block content %}     
+            {{ content | safe }}
+            {% endblock %}
+          </div>
+        {% else %}
+          {{ content | safe }}
+        {% endif %}
     </main>
     
     {% include "partials/sponsors.njk" %}

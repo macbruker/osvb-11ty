@@ -3,9 +3,10 @@ title: Medlemskap
 description: 'Det du trenger å vite om medlemskap i Oslo sandvolleyballklubb.'
 permalink: '/om-klubben/medlemskap/'
 layout: default.njk
-eleventyNavigation:
-  key: Medlemskap
-  parent: Om klubben
+tags: ['klubben']
+parent: 
+  title: Om klubben
+  url: '/om-klubben/'
 ---
 
 ## Medlemskontingent

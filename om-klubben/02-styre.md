@@ -3,18 +3,11 @@ title: Styre
 description: ''
 permalink: '/om-klubben/styre/'
 layout: default.njk
-showParent: true
-eleventyNavigation:
-  key: Styre
-  parent: Om klubben
+tags: ['klubben']
+parent: 
+  title: Om klubben
+  url: '/om-klubben/'
 ---
-
-
-
-
-
-
-<small>Oppdatert 1. mars 2025</small>
 
 ## Styreleder
 Stine Schjødt-Osmo
@@ -31,3 +24,7 @@ Håkon Tveitan
 * Svanhild Remme
 * Helga Lindheim
 * Pål Tanggaard (vara)
+
+--- 
+
+<small>Oppdatert 1. mars 2025</small>

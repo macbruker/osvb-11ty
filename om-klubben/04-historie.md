@@ -3,10 +3,10 @@ title: Historie
 description: ''
 permalink: '/om-klubben/historie/'
 layout: default.njk
-showParent: true
-eleventyNavigation:
-  key: Historie
-  parent: Om klubben
+tags: ['klubben']
+parent: 
+  title: Om klubben
+  url: '/om-klubben/'
 ---
 
 ## 18.Juli 2000 - Hammerfest

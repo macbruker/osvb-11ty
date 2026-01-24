@@ -9,7 +9,7 @@ eleventyNavigation:
 
 {% set subpages = collections.all | eleventyNavigation("Treninger") | sort(false, false, "data.order") %}
 
-Treningstilbudet vårt er delt inn i følgende målgrupper:
+Treningstilbudet vårt er delt inn i tre målgrupper. Les mer om dem på sidene nedenfor.
 
 <ul class="panellist">
 {% for entry in subpages %}

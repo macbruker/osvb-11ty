@@ -11,4 +11,12 @@ const dateFormat = function (value, options) {
 // Render content as inline markdown
 const markdownInline = (content) =>  md.renderInline(content)
 
-export { dateFormat, markdownInline }
+
+const exclude = (array, stringToFilter) => {
+  if (!stringToFilter) {
+    return array;
+  }
+  return (array ?? []).filter((item) => item !== stringToFilter);
+};
+
+export { dateFormat, markdownInline, exclude }

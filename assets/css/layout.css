@@ -3,11 +3,12 @@
 .grid-layout {
     display: grid;
     grid-auto-flow: row dense;
+    align-content: start;
     grid-template-columns: 
         [full-start] var(--edge-pos) minmax(0, 1fr) 
         [container-start header-start] var(--edge-pos) 
-        [prose-start] minmax(0, 20rem)
-        [header-end nav-start] minmax(0, 20rem) 
+        [prose-start] minmax(0, calc(var(--container) / 2))
+        [header-end nav-start] minmax(0, calc(var(--container) / 2)) 
         [prose-end] var(--edge-pos) 
         [nav-end container-end] minmax(0, 1fr) var(--edge-pos) [full-end];
 }
@@ -42,7 +43,7 @@
 
 .logo {
     display: inline-block;
-    margin-inline-start: -0.125em;
+    margin-inline-start: -0.375em;
     transition: margin-inline-start linear 100ms;
     flex-shrink: 0;
 
@@ -56,8 +57,8 @@
 }
 
 .logo svg {
-    fill: var(--color-white);
-    inline-size: clamp(8.25rem, 7rem + 6.25vw, 11rem);
+    fill: var(--white);
+    inline-size: clamp(10rem, 9.0909rem + 4.5455vw, 12rem);
     block-size: 100%;
 }
 
@@ -71,25 +72,28 @@
 .nav {
     font-stretch: extra-condensed;
     display: contents;
-    color: var(--color-white);
+    color: var(--white);
 }
 
 :where(.nav) button {
+    background-color: var(--accent-yellow);
+    border-radius: 99ch;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: inherit;
-    line-height: 1;
-    text-transform: inherit;
-    padding: .5em;
-    cursor: pointer;
-    justify-self: end;
     gap: 0.5em;
     grid-column-end: nav;
     align-self: center;
-    translate: 0.5em -0.25em;
-    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: end;
+    translate: 0.25em -0.125em;
+    padding: .5em 1em;
+    font-size: inherit;
+    font-weight:450;
+    line-height: 1;
     text-transform: uppercase;
+    color: var(--base-dark);
+    cursor: pointer;
+    z-index: 1;
 }
 
 :where(.nav) button span {
@@ -102,25 +106,24 @@
     flex-shrink: 0;
 }
 
-:where(.nav) button rect {
-    transition: transform .15s ease-in
+:where(.nav) button path {
+    transition: rotate .15s ease-out;
+    transform-origin: 12px;
 }
 
-:where(.nav) button[aria-expanded=true] rect:nth-child(2) {
-    fill: transparent
+:where(.nav) button[aria-expanded=true] :is(path:nth-of-type(1),path:nth-of-type(4)) {
+    stroke: transparent
 }
 
-:where(.nav) button[aria-expanded=true] rect:first-child {
-    transform: translateY(8px) rotate(45deg);
-    transform-origin: 12px 5px
+:where(.nav) button[aria-expanded=true] path:nth-of-type(2) {
+    rotate: 45deg;
 }
 
-:where(.nav) button[aria-expanded=true] rect:last-child {
-    transform: translateY(-8px) rotate(-45deg);
-    transform-origin: 12px 19px
+:where(.nav) button[aria-expanded=true] path:nth-of-type(3) {
+    rotate: -45deg;
 }
 
-:where(.nav) button[aria-expanded=false] rect {
+:where(.nav) button[aria-expanded=false] path {
     transition: none
 }
 
@@ -137,19 +140,17 @@
 /* MENU */
 
 
-.menu {
+.nav:has(button) .menu {
     grid-column: container;
     inline-size: 100%;
     block-size: auto;
-    transition: block-size 0.25s ease;
+    transition: block-size 0.25s ease-out;
     z-index: 1;
-}
 
-.menu[hidden] { 
-    display: block !important;
-    block-size: 0;
-    inline-size: 100%;
- }
+    @starting-style {
+        block-size: 0;
+    }
+}
 
 .menu ul {
     list-style: none;
@@ -163,15 +164,15 @@
     position: relative;
     break-inside: avoid;
     margin-block-start: 0;
-    border-block-end: 1px solid color-mix(in srgb, var(--color-blue) 30%, transparent);
+    border-block-end: 1px solid color-mix(in srgb, var(--accent-blue) 30%, transparent);
 }
 
 .menu a {
     display: block;
     color: currentColor;
     text-decoration: none;
-    font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
-    font-stretch: 62.5%;
+    font-size: clamp(1.375rem, 1.2045rem + 0.8523vw, 1.75rem);
+    font-stretch: 75%;
     font-weight: 400;
     padding-block: 0.5em 0.625em;
     text-shadow: 0 1px 2px rgb(0 0 0 / 0.5);
@@ -179,7 +180,7 @@
 
 :where(.menu) a:hover {
     text-decoration-line: underline;
-    text-decoration-color: var(--color-blue);
+    text-decoration-color: var(--accent-blue);
     text-decoration-thickness: 0.15ch;
 }
 
@@ -193,7 +194,6 @@
     position: relative;
     z-index: 10;
     margin-block-end: 3rem;
-    min-block-size: 40vi;
 } 
 
 .main--home {
@@ -201,13 +201,12 @@
 }
 
 .main--page {
-    background-color: var(--color-sand);
-    color: var(--color-night-faded);
+    background-color: var(--base-light);
+    color: var(--base-dark-faded);
     grid-column: full;
-    padding: clamp(1.5rem, 6.25vw, 5rem) var(--edge-pos) clamp(3rem, 10vw, 8rem);
     overflow-y: clip;
     border-radius: 1em;
-    box-shadow: 0 10px 40px 10px var(--color-night-20);
+    box-shadow: 0 10px 40px 10px hsl(from var(--base-dark) H S L / 20%);
 
     @media (width > 640px) {
         border-radius: 0.5em;
@@ -220,6 +219,16 @@
 }
 
 
+.breadcrumbs {
+    box-shadow: 0 1px 0 hsl(from var(--base-dark) H S L / 20%);
+    padding-block: .375lh .4375lh;
+    padding-inline: 2ch;
+}
+
+.prose {
+    padding: clamp(1.5rem, 6.25vw, 5rem) var(--edge-pos) clamp(3rem, 10vw, 8rem);
+}
+
 .aside {
     position: relative;
     z-index: 1;
@@ -227,7 +236,8 @@
 }
 
 .panellist {
-    border-block-start: 1px solid var(--color-night-20);
+    border-block-start: 1px solid hsl(from var(--base-dark) H S L / 20%);
+    margin-block-start: 1lh;
     clear: both;
 }
 
@@ -235,23 +245,23 @@
     position: relative;
     padding-block: 0.5lh;
     line-height: 1.5;
-    border-block-end: 1px solid var(--color-night-20);
+    border-block-end: 1px solid hsl(from var(--base-dark) H S L / 20%);
     display: grid;
 }
 
 .panel a {
     text-decoration: none;
     font-stretch: semi-condensed;
-    font-size: 1.25em;
-    font-weight: 800;
+    font-size: 1em;
+    font-weight: 600;
     color: currentColor;
     text-decoration-line: underline;
     text-underline-offset: 0.125em;
-    text-decoration-color: var(--color-blue);
+    text-decoration-color: var(--accent-blue);
 }
 
 .panel a:hover {
-    text-decoration-color: var(--color-pink);
+    text-decoration-color: var(--accent-pink);
 }
 
 .panel span {
@@ -283,7 +293,7 @@
 }
 
 .panel a:hover:after {
-    background-color: var(--color-white);
+    background-color: var(--white);
     box-shadow: 0 12px 24px -16px rgb(0 0 0 / 0.25);
 }
 
@@ -298,7 +308,7 @@
 /* FOOTER */
 
 .footer {
-    border-block-start: 1px solid var(--color-white-10);
+    border-block-start: 1px solid hsl(from var(--white) H S L / 10%);
     padding: 1em clamp(1rem, -1.261rem + 9.275vi, 5rem);
     font-size: 0.75em;
     display: flex;
@@ -306,7 +316,7 @@
     column-gap: 4em;
     justify-content: space-between;
     align-items: flex-start;
-    color: var(--color-white);
+    color: var(--white);
 
     @media (width > 480px) {
         padding-inline: 0;
@@ -326,14 +336,14 @@
     }
 }
 
+.footer a {
+    color: var(--white);
+}
 .footer > a {
-    color: var(--color-white);
-
     @media (width > 800px) {
         margin-inline-start: -2.5em;
     }
 }
-
 
 
 
@@ -364,107 +374,96 @@
 }
 
 
-:where(.pages) p {
-    --text-opacity: 0.8;
-    display: block;
-    margin-block-end: clamp(0.75rem, 0.2283rem + 2.6087vi, 2.25rem);
-    color: color-mix(in srgb, var(--color-blue) 40%, white);
-}
-
-
-.scroll-container {
+.scroll-overflow {
     grid-column: full;
     margin-block: 1lh 1.5lh;
 
     @media (width < 1200px) {
-        overflow: hidden;
+        overflow: clip;
     }
 }
-.side-scroll {
+.scroll-container {
+    display: flex;
+
     @media (width < 1200px) {
         overflow-x: scroll;
         margin-block-end: -1lh;
         padding-block: 1lh 1.25lh;
     }
 }
-.posts {
+.edge-spacer {
+    padding-inline: calc(var(--edge-pos) / 2);
+    flex:0;
+}
+
+.post-list {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: calc(var(--edge-pos) - 1.375rem) repeat(3, minmax(18rem, 1fr)) calc(var(--edge-pos) - 1.375rem);
+    grid-template-columns: calc(var(--edge-pos) - 1.5rem) repeat(3, minmax(18rem, 1fr)) calc(var(--edge-pos) - 1.5rem);
     margin-inline: auto;
-    max-inline-size: 87.5rem;
+    max-inline-size: 80rem;
+    inline-size: stretch;
 }
 
-
-.polaroid {
-    flex-shrink: 0;
-    justify-content: center;
-    text-align: center;
+.post {
     position: relative;
+    border-radius: .5em;
+    background: var(--base-light);
+    padding:1.5em;
+    aspect-ratio: 4/3;
+    color: var(--base-dark);
     display: grid;
-    aspect-ratio: 4/5;
-    min-inline-size: 18rem;
-    padding: clamp(0.375rem, 0.2446rem + 0.6522vi, 0.75rem);
-    padding-block-end: 1rem;
-    background-color: var(--color-sand);
-    border-radius: 0.25rem;
-    gap: 0.5rem;
-    color: var(--color-night);
-    line-height: 1.4;
-    background-image: linear-gradient(to top, var(--color-white), transparent 30%);
-    transition: all 300ms ease-out;
-    box-shadow:
-        0 1px 2px -1px rgb(255 255 255 / 0.5) inset,
-        0 1px 2px -1px rgb(0 0 0 / 0.25),
-        0 12px 24px -16px rgb(0 0 0 / 0.75);
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    container-type: inline-size;
+    rotate:1deg;
+
+    &:has(a:hover){
+        background-color: var(--white);
+    }
+    &:nth-child(2n+1) {
+        rotate:-1deg;
+    }
+    a:after {
+        content:"";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
 }
-.polaroid:first-of-type {
-    grid-column-start: 2;
+.post__title {
+    font-size: clamp(1.375rem, 1.2045rem + 0.8523vw, 1.75rem);
+    font-stretch: 75%;
+    line-height: 1.35;
+    font-weight: 400;
+    block-size: stretch;
+}
+.post__emoji {
+    float: right;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    margin-inline-start: 1em;
+    padding:0.125em 0.5em;
+    background: var(--white);
+    border-radius: 99ch;
+    justify-self: start;
+    align-self: start;
+    font-size:x-large;
 }
 
-.polaroid:has(a:hover) {
-    background-color: var(--color-white);
-    transform-origin: 50% 40%;
-    scale: 1.05;
-    z-index: 10;
+.tags {
+    padding-block-start: .5lh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    grid-column: 1/-1;
+    font-size: smaller;
+    opacity: .7;
 }
 
-.polaroid:where(:nth-child(1), :nth-child(3)) {
-    rotate: -1deg;
-}
 
-.polaroid:where(:nth-child(2)) {
-    rotate: 1deg;
-}
-
-:where(.polaroid) img {
-    border-radius: 0.125rem;
-    max-inline-size: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: clip;
-    box-shadow: inset 0 1px 1px rgb(0 0 0 / 0.25);
-}
-
-:where(.polaroid) a {
-    font-size: clamp(1.25rem, 1.1591rem + 0.4545vi, 1.5rem);
-    font-stretch: extra-condensed;
-    padding-inline: 1em;
-    color: currentColor;
-    text-decoration-line: underline;
-    text-decoration-color: var(--color-blue);
-}
-
-:where(.polaroid) a:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-}
-
-:where(.polaroid) a:hover {
-    text-decoration: none;
-}
-
-:where(.main, details) > *:not(h2, h3) + :where(*:not(h1, details, dl ,article)) {
+:where(.prose, details) > *:not(h2, h3) + :where(*:not(h1, details, dl ,article)) {
     margin-block-start: 1.5em
 }
 
@@ -474,35 +473,36 @@
 
 
 .kicker {
-    color: var(--color-night);
+    display: block;
+    color: var(--base-dark);
     font-weight: 600;
     margin-block-end: .25lh;
     font-stretch: semi-condensed;
     inline-size: fit-content;
     text-indent: -0.25ch;
+
+    &:has(a) {
+        margin-inline-start:-2ch;
+    }
 }
 
-a.kicker {
+.kicker a {
     text-decoration-line: underline;
-    text-decoration-color: var(--color-blue);
-}
+    text-decoration-color: var(--accent-blue);
 
-a.kicker:hover {
-    color: var(--color-blue);
+    &:hover {
+        color: var(--accent-blue);
+    }
 }
 
 .title {
     margin-block: 0 0.25em;
-    line-height: 1.2;
-    font-stretch: extra-condensed;
-    font-weight: 900;
-    font-variation-settings: "wght" 900;
 }
 
 .thumbnail {
     position: relative;
     aspect-ratio: 8/9;
-    background-color: var(--color-white);
+    background-color: var(--white);
     border-radius: 0.125rem;
     box-shadow: 0 12px 24px -16px rgb(0 0 0 / 0.25);
     padding: 0.75rem;
@@ -527,7 +527,7 @@ a.kicker:hover {
 .event-data {
     display: grid;
     font-size: 90%;
-    border-top: 1px solid var(--color-night-10);
+    border-top: 1px solid hsl(from var(--base-dark) H S L / 10%);
 
     @media (width > 640px) {
         grid-template-columns: repeat(2, 1fr);
@@ -535,7 +535,7 @@ a.kicker:hover {
 }
 
 .event-data div {
-    border-bottom: 1px solid var(--color-night-10);
+    border-bottom: 1px solid hsl(from var(--base-dark) H S L / 10%);
     padding-block: 0.5em;
 
     @media (width > 640px) {
@@ -545,8 +545,8 @@ a.kicker:hover {
 
 
 .teaser {
-    background-color: var(--color-white);
-    box-shadow: 0 1px 2px var(--color-night-10);
+    background-color: var(--white);
+    box-shadow: 0 1px 2px hsl(from var(--base-dark) H S L / 10%);
     margin: 2em 0;
     border-radius: .25em;
     padding: 1em;
@@ -566,11 +566,11 @@ a.kicker:hover {
 .teaser a {
     color: currentColor;
     text-decoration: underline;
-    text-decoration-color: var(--color-blue);
+    text-decoration-color: var(--accent-blue);
 }
 
 .teaser a:hover {
-    color: var(--color-pink);
+    color: var(--accent-pink);
     text-decoration: none;
 }
 
@@ -603,11 +603,11 @@ a.kicker:hover {
 }
 
 .button {
-    background-color: var(--color-yellow);
+    background-color: var(--accent-yellow);
     padding: .625em 1.5em .75em;
     border-radius: .125em;
     text-decoration: none;
-    color: var(--color-night);
+    color: var(--base-dark);
     font-size: .9325em;
     font-weight: 600;
     white-space: nowrap;
@@ -626,12 +626,12 @@ a.kicker:hover {
 }
 
 .join a {
-    background-color: var(--color-yellow);
+    background-color: var(--accent-yellow);
     padding-block: .4em .5em;
     border-radius: 2em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--color-night);
+    color: var(--base-dark);
     font-size: clamp(2rem, -0.1818rem + 10.9091vi, 8rem);
     font-weight: 600;
     white-space: nowrap;
@@ -641,7 +641,7 @@ a.kicker:hover {
     transition: background-color 150ms ease;
 }
 .join a:hover {
-    background-color: var(--color-sand);
+    background-color: var(--base-light);
 }
 
 
@@ -650,10 +650,11 @@ a.kicker:hover {
     grid-column: prose;
     list-style: none;
     padding-inline-start: 0;
+    margin-block-start: .5lh;
 }
 
 .event-listing {
-    border-block-start: 1px solid var(--color-night-20);    
+    border-block-start: 1px solid hsl(from var(--base-dark) H S L / 20%);    
     position: relative;
     grid-column: prose;
     display: grid;
@@ -688,6 +689,7 @@ a.kicker:hover {
     z-index: -1;
     padding-inline: var(--edge-pos);
     margin-inline: var(--edge-neg);
+    box-shadow: 0 0 0 var(--base-light);
 
     @media (width > 800px) {
         padding-inline: 1em;
@@ -697,8 +699,9 @@ a.kicker:hover {
 }
 
 .event-listing a:hover:after {
-    background-color: var(--color-white);
+    background-color: var(--white);
     box-shadow: 0 12px 24px -16px rgb(0 0 0 / 0.25);
+    transition: box-shadow 100ms ease-out;
 }
 
 .event-listing:has(a:hover) {
@@ -706,8 +709,8 @@ a.kicker:hover {
 }
 
 .event-listing:has(a:active) {
-    background-color: var(--color-white);
-    box-shadow: 0 1px 0 var(--color-white);
+    background-color: var(--white);
+    box-shadow: 0 1px 0 var(--white);
     z-index: 1;
 }
 
@@ -733,23 +736,23 @@ a.kicker:hover {
     inline-size: 1.75em;
     overflow: clip;
     border-radius: 0.125em;
-    outline: 1px solid var(--color-night-10);
+    outline: 1px solid hsl(from var(--base-dark) H S L / 10%);
     outline-offset: -1px;
 }
 
 .cal-day :nth-child(1) {
-    background-color: var(--color-blue);
+    background-color: var(--accent-blue);
     padding-block-end: 0.025em;
     text-transform: uppercase;
     font-size: 0.625em;
     font-weight: 600;
     font-stretch: semi-condensed;
-    color: var(--color-white);
+    color: var(--white);
     line-height: 1.6;
 }
 
 .cal-day :nth-child(2) {
-    background-color: var(--color-white);
+    background-color: var(--white);
     text-transform: uppercase;
     font-stretch: extra-condensed;
     font-size: 1.25em;
@@ -759,28 +762,28 @@ a.kicker:hover {
 }
 
 .event-listing:has(a:hover) .cal-day :nth-child(1) {
-    background-color: var(--color-pink);
+    background-color: var(--accent-pink);
 }
 .event-listing:has(a:hover) .cal-day :nth-child(2) {
-    background-color: var(--color-sand);
+    background-color: var(--base-light);
 }
 
 
 .schedule {
-    --_column-size: min(42ch, 90%);
-    --_column-edge: clamp(1.5rem, 0rem + 5vw, 4rem);
+    --_column-size: min(32ch, 80%);
+    --_column-edge: clamp(1.25rem, 0rem + 3vw, 2rem);
     display: grid;
     margin-inline: var(--edge-neg);
     grid-template-columns: 
-        calc(var(--_column-size) + var(--edge-pos) - var(--_column-edge))
-        repeat(5, var(--_column-size))
-        calc(var(--_column-size) + var(--edge-pos) - var(--_column-edge));
+        auto
+        repeat(7, var(--_column-size))
+        auto;
     overflow: auto visible;
     scrollbar-width: none;
     container: scroll-state;
     scroll-snap-type: x mandatory;
     scroll-padding-inline: var(--edge-pos);
-    padding-block-start: 2lh;
+    padding-block-start: .5lh;
     margin-inline: var(--edge-neg);
     margin-block-end: clamp(-8rem, -10vw, -3rem);
     border-radius: 0 0 0.5em 0.5em;
@@ -788,60 +791,62 @@ a.kicker:hover {
 .schedule__day {
     position: relative;
     block-size: stretch;
-    border-block-start: 1px solid var(--color-night-20);
+    border-block-start: 1px solid hsl(from var(--base-dark) H S L / 20%);
     padding-block: 0.5lh 2.5lh;
     padding-inline: var(--_column-edge);
 }
-.schedule__day:not(:last-of-type) {
-    border-inline-end: 1px solid var(--color-night-20);
+.schedule__day:not(#sondag) {
+    border-inline-end: 1px solid hsl(from var(--base-dark) H S L / 20%);
 }
-.schedule__day:first-of-type {
-    padding-inline-start: var(--edge-pos);
+.schedule__day:where(#mandag) {
+    padding-inline-start: 0;
 }
-.schedule__day:last-of-type {
-    padding-inline-end: var(--edge-pos);
+.schedule__day:where(#sondag) {
+    padding-inline-end: 0;
 }
 .schedule__head {
     font-size: 1.25em;
     margin-block-end: 0;
-    position: absolute;
-    inset-block-end: 100%;
     padding-block-end: 0.25lh;
-    border-block-end: 0.125lh solid #fff0;
 }
 .schedule__head[aria-current="page"] {
-    border-block-end-color: var(--color-blue);
+    border-block-end-color: var(--accent-blue);
 }
 .schedule__body {
     scroll-snap-align: start;
 }
 .schedule dl div + div {
-    margin-block-start: 1lh;
+    margin-block-start: .5lh;
+    border-block-start:1px dashed hsl(from var(--base-dark) H S L / 20%);
+    padding-block-start: 1lh;
 }
 .schedule dt {
-    background-color: var(--color-yellow);
-    border-radius: 0.25em;
-    padding-inline: 0.25em;
-    margin-inline: -0.25em;
+    background-color: var(--accent-yellow);
+    padding-inline: 0.15em;
     margin-block-end: 0.25lh;
     inline-size: fit-content;
     font-stretch: semi-condensed;
     font-size: 0.875em;
+    line-height: 1.3;
 }
 .schedule dd {
     text-wrap: pretty;
-    padding: 0.125lh 0.5ch;
+    padding: 0.25lh 0.5ch 0.5lh;
     margin-inline: -0.25em;
     border-radius: 0.25em;
     column-gap: 2ch;
-    line-height: 1.4;
+    line-height: 1.3;
 }
-.schedule dd p {
-    inline-size: 100%;
-    flex-shrink: 0;
+.schedule dd b {
+    letter-spacing: -0.0125em;
 }
-
-
+.schedule dd > span {
+    font-size: smaller;
+    opacity: 0.8;
+}
+.schedule p > strong {
+    display: block;
+}
 
 
 
@@ -851,7 +856,7 @@ a.kicker:hover {
     grid-column: full;
     margin-block-start: 2rem;
     text-align: center;
-    color: var(--color-white);
+    color: var(--white);
 }
 
 .sponsors a {
@@ -876,9 +881,9 @@ a.kicker:hover {
     opacity: 0.25;
 }
 
-
-
-
+.spacer-edge {
+    inline-size: var(--edge-pos);
+}
 
 .sr-only {
     border: 0 !important;

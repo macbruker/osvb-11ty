@@ -1,6 +1,6 @@
 ---
 title: 'Kalender'
-description: 'Alt du trenger å vite om de ulike turneringene og arrangementene  i Oslo sandvolleyballklubb.'
+description: 'Alt du trenger å vite om de ulike turneringene og arrangementene som skjer i klubben.'
 layout: calendar.njk
 permalink: '/kalender/'
 eleventyExcludeFromCollections: true

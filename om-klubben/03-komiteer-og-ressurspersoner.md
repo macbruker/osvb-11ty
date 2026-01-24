@@ -3,10 +3,10 @@ title: Komitéer og ressurspersoner
 description: ''
 permalink: '/om-klubben/komiteer-og-ressurspersoner/'
 layout: default.njk
-showParent: true
-eleventyNavigation:
-  key: Komitéer og ressurspersoner
-  parent: Om klubben
+tags: ['klubben']
+parent: 
+  title: Om klubben
+  url: '/om-klubben/'
 ---
 
 ## Valgkomité 2025

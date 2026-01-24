@@ -9,39 +9,44 @@ layout: 'base.njk'
 
   {{ content | safe }}
 
-<div class="schedule">
-  {%- for day in collections.schedule -%}
-  <div class="schedule__day" id="{{ day.data.title | lower }}">
-    <h2 class="schedule__head" {{ 'aria-current=page' if (day.data.title | lower) === site.weekday }}>
-      <span>{{ day.data.title }}</span>
-    </h2>
-    <div class="schedule__body">
-      {%- if day.data.events -%}       
-      <dl>
-        {%- for event in day.data.events -%}
-          <div>
-          <dt>{{ event.timeslot }}</dt>
-          {%- for group in event.groups -%}
-            <dd>
-              <b>{{ group.name }}</b> <span>på bane {{ group.court }}</span>
-              {%- if group.info -%}
-              <p><small>{{ group.info | markdownInline | safe }}</small></p>
-              {%- endif -%}
-            </dd>
-          {%- endfor -%} 
-        </div>
-        {%- endfor -%}
-      </dl>
-      {%- endif -%}
-      {%- if day.data.info -%}
-      <p>{{ day.data.info | markdownInline | safe }}</p>
-      {%- endif -%}
+  <div class="schedule">
+    <div class="spacer-edge"></div>
+    {%- for day in collections.schedule -%}
+    <div class="schedule__day" id="{{ day.data.title | slugify }}">
+      <h2 class="schedule__head" {{ 'aria-current=page' if (day.data.title | lower) === site.weekday }}>
+        <span>{{ day.data.title }}</span>
+      </h2>
+      <div class="schedule__body">
+        {%- if day.data.events -%}       
+        <dl>
+          {%- for event in day.data.events -%}
+            <div>
+            <dt>{{ event.timeslot }}</dt>
+            {%- for group in event.groups -%}
+              <dd>
+                <b>{{ group.name }}</b><br><span>Bane {{ group.court }}</span>
+                {%- if group.info -%}
+                <p><small>{{ group.info | markdownInline | safe }}</small></p>
+                {%- endif -%}
+              </dd>
+            {%- endfor -%} 
+          </div>
+          {%- endfor -%}
+        </dl>
+        {%- endif -%}
+        {%- if day.data.info -%}
+        <p>{{ day.data.info | markdownInline | safe }}</p>
+        {%- endif -%}
+      </div>
     </div>
-  </div>
-  {%- endfor -%}
-</div> 
+    {%- endfor -%}
+    <div class="spacer-edge"></div>
+  </div> 
 
 <script type="text/javascript">
-  const weekday = new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date())
-  document.querySelector('#' + weekday).scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'start' });
+  const weekday = new Intl.DateTimeFormat("no-NB", { weekday: "long" }).format(new Date()).replace("ø", "o")
+  const today = document.querySelector('#' + weekday)
+  console.log(today.parentNode.getBoundingClientRect().width, today.offsetLeft)
+  today.parentNode.scrollLeft = today.offsetLeft
+  today.classList.add('martin')
 </script>

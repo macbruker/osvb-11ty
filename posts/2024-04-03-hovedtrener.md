@@ -1,6 +1,10 @@
 ---
 title: 'Vil du være hovedtrener sommeren 2024?'
 description: 'Har du et brennende engasjement for sandvolleyball og lyst til å jobbe med det sommeren / sandvolleyballsesongen 2024?'
+emoji: '🧑‍🏫'
+tags:
+  - Oppdrag
+  - Trening
 media: '/assets/images/hovedtrener-2024.webp'
 ---
 

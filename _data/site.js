@@ -18,14 +18,14 @@ export default {
             url: '/treninger/'
         },
         {
-            title: 'Turneringer',
-            description: 'Formater, lisenser og regler',
-            url: '/turneringer/'
-        },
-        {
             title: 'Booking',
             description: 'Retningslinjer og priser for baneleie',
             url: '/booking/'
+        },
+        {
+            title: 'Turneringsinfo',
+            description: 'Formater, lisenser og regler',
+            url: '/turneringer/'
         },
         {
             title: 'Om klubben',
