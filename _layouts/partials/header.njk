@@ -4,4 +4,16 @@
       {% include "partials/logo.njk" %}
     </a>
   </div>
+  <button id="menu-button" aria-pressed="false">
+    <span>Meny</span>
+  </button>
+  <nav class="menu">
+    <ul>
+      {% for item in site.menu %}
+      <li>
+        <a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
 </header>

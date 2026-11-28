@@ -1,13 +1,29 @@
 ---
-title: Komitéer og ressurspersoner
+title: Styre, komitéer og ressurspersoner
 description: ''
-permalink: '/om-klubben/komiteer-og-ressurspersoner/'
+permalink: '/om-klubben/styre/'
 layout: default.njk
 tags: ['klubben']
 parent: 
   title: Om klubben
   url: '/om-klubben/'
 ---
+
+## Styreleder
+Stine Schjødt-Osmo
+
+## Nestleder
+Håkon Tveitan
+
+## Styremedlemmer
+
+* Bendik Gabriel Huus
+* Torbjørn Nordli
+* Marit Ribe Øverby
+* Ruben Løvli
+* Svanhild Remme
+* Helga Lindheim
+* Pål Tanggaard (vara)
 
 ## Valgkomité 2025
 Trond Arne Staurset, Lars Erik Junge og Solfrid Eiesland (vara)
@@ -47,3 +63,8 @@ Sven Andreas Nygaard, Odd Tørres Lunde, Vera Garberg og Sindre Svendby
 
 ### NorgesTour og lisenser
 Håkon Tveitan og Stine Schjødt-Osmo
+
+
+--- 
+
+<small>Oppdatert 1. mars 2025</small>

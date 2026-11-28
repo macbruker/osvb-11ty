@@ -8,7 +8,7 @@ showParent: true
 eleventyNavigation:
   key: Senior
   excerpt: Voksne i alle aldre
-  parent: Treninger
+  parent: Treningstilbud
 ---
 Det er ingen øvre eller nedre aldersgrense for å trene sandvolleyball med oss, men de yngste (fra 1.-10.klasse) har et [eget opplegg](/treninger/junior/). Videregående og oppover melder seg på ordinære senior-treninger.
 

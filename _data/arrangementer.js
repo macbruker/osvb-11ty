@@ -1,6 +1,6 @@
 export default [
     {
-        title: 'Herrer, nivå 1–3',
+        title: 'Herrer nivå 1–3',
         date: '2024-07-16',
         time: '17.00–18.30',
         court: '1–6'

@@ -1,24 +1,9 @@
-<nav class="nav">
-  <button type="button" aria-expanded="false" data-nrk-core-toggle-2-2-3="false"
-    aria-controls="lrf9l9ipqzo" id="lrf9l9iptmk">
-    <span>Meny</span>
-    <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
-      <g fill-rule="evenodd" stroke="currentColor" stroke-width="2">
-        <path d="M2 4H22" />
-        <path d="M2 12H22" />
-        <path d="M2 12H22" />
-        <path d="M2 20H22" />
-      </g>
-    </svg>
-  </button>
-
-  <div class="menu" id="lrf9l9ipqzo" aria-labelledby="lrf9l9iptmk" hidden>
-    <ul>
-      {% for item in site.menu %}
-      <li>
-        <a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+<nav class="menu">
+  <ul>
+    {% for item in site.menu %}
+    <li>
+      <a {{ 'aria-current=page' if page.url === item.url }} href="{{ item.url or '#' }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </nav>

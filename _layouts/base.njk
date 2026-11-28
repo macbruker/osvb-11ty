@@ -8,27 +8,23 @@
   <meta name="robots" content="noindex">
   <meta name="generator" content="{{ eleventy.generator }}">
   {# <link rel="preconnect" href="https://osvb.no" crossorigin> #}
-  <link rel="preload" href="/assets/noto-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="http://localhost" crossorigin>
+  <link rel="preload" href="/assets/roboto-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/lora-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" href="/assets/images/favicon.webp"> 
   <meta name="generator" content="{{ eleventy.generator }}">
   {% include "partials/open-graph.njk" %}
 </head>
 <body>
-  {% block debug %}{% endblock debug %}
   <div class="grid-layout">
     {% include "partials/header.njk" %}
-    {% if page.url != '/' %}{% include "partials/nav.njk" %}{% endif %}
 
     <main class="main {{ 'main--home grid-layout' if page.url === '/' else 'main--page' }}">
-
-      {% block breadcrumbs %}{% endblock %}
-
         {% if page.url != '/' %}
           <div class="prose">
-            {% block content %}     
-            {{ content | safe }}
-            {% endblock %}
+            {% block breadcrumbs %}{% endblock %}
+            {% block content %}{{ content | safe }}{% endblock %}
           </div>
         {% else %}
           {{ content | safe }}

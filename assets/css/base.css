@@ -1,8 +1,10 @@
 
 :root {
+    interpolate-size: allow-keywords;
+
     --white: hsl(0 0% 100%);
     --base-dark: hsl(220 33% 11%);
-    --base-dark-faded: hsl(from var(--base-dark) H calc(S / 2) calc(L + 5));   
+    --base-dark-faded: hsl(from var(--base-dark) H calc(S / 2) calc(L + 10));   
     --base-light: hsl(36 19% 93%);   
     --accent-pink: hsl(330 70% 45%);
     --accent-blue: hsl(195 100% 40%);
@@ -13,7 +15,16 @@
 
     --container:42rem;
 
-    interpolate-size: allow-keywords;
+    --text--2: clamp(0.8rem, 0.9481rem + -0.1975vw, 0.8889rem);
+    --text--1: clamp(1rem, 1rem + 0vw, 1rem);
+    --text-0: clamp(1.125rem, 1.0417rem + 0.2778vw, 1.25rem);
+    --text-1: clamp(1.2656rem, 1.0677rem + 0.6597vw, 1.5625rem);
+    --text-2: clamp(1.4238rem, 1.071rem + 1.1762vw, 1.9531rem);
+    --text-3: clamp(1.6018rem, 1.0421rem + 1.8658vw, 2.4414rem);
+    --text-4: clamp(1.802rem, 0.9689rem + 2.7772vw, 3.0518rem);
+    
+    --text-0: clamp(1.25rem, 1.2143rem + 0.1786vw, 1.5rem);
+    /* @link https://utopia.fyi/type/calculator?c=480,18,1.125,1200,20,1.25,4,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 }
 
 @view-transition {
@@ -21,12 +32,12 @@
 }
 
 html {
-    font-family: 'Noto Sans', system-ui, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-optical-sizing: auto;
+    font-weight: 350;
     background-color: var(--base-dark);
     color: var(--white);
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
@@ -35,53 +46,43 @@ html {
 }
 
 body {
-    font-size: clamp(1rem, 0.859rem + 0.58vi, 1.25rem);
-    line-height: 1.6;
+    font-size: var(--text-0);
+    line-height: 1.5;
     margin: 0
 }
 
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1.33334;
-    margin-block: 0 .25em;
+:where(h1,h2,h3,h4) {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.25;
+}
+
+:where(h2,h3,h4){
+    margin-block: 1.25em 0.25em;
 }
 
 h1 {
-    font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
-    line-height: 1.2;
-    font-stretch: extra-condensed;
+    font-size: var(--text-4);
+    line-height: 1.125;
     font-weight: 900;
+    margin-block: 0.125em 0.25em;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: var(--text-2);
     font-weight: 800;
-    letter-spacing: -0.05ch;
-    font-stretch: semi-condensed;
 }
 
 h3 {
-    font-size: 1.125em;
-    font-weight: 800;
-    font-stretch: semi-condensed;
+    font-size: var(--text-1);
+    font-weight: 600;
 }
 
 h4 {
-    font-size: 1em;
+    font-size: var(--text-0);
     font-weight: 800;
 }
-:where(h2,h3,h4) + :is(h2,h3,h4) {
-    margin-block-start: 0.5lh;
-}
-
-:where(p, ul, ol, dl) {
-    margin-block: 0.125lh 0;
-}
-
-:where(dl, ul, ol):not([class]) :where(li + li) {
-    margin-block-start: 0.375lh;
+:where(h3,h4) + :is(h3,h4,ul,p) {
+    margin-block-start: 0.125lh;
 }
 
 ul:not([class]) {
@@ -94,6 +95,10 @@ ul[class] {
     padding-inline-start: 0;
 }
 
+:where(dl, ul, ol):not([class]) :where(li + li) {
+    margin-block-start: 0.125lh;
+}
+
 :where(p, li) {
     text-wrap: pretty;
 }
@@ -102,13 +107,11 @@ ul[class] {
     margin-block-start: 0;
 }
 
-b,
-strong {
-    font-weight: 600
+:where(b,strong, p > a) {
+    font-weight: 500
 }
 
 a {
-    color: var(--base-dark);
     text-decoration-color: var(--accent-blue);
     text-underline-offset: 0.1lh;
     text-decoration-thickness: 0.125ch;
@@ -201,9 +204,7 @@ summary {
     padding-block: 0.25lh;
     font-weight: 700;
     cursor: pointer;
-    font-stretch: semi-condensed;
     margin-inline-start: -28px;
-    letter-spacing: -0.0125ch;
     display: inline-flex;
     gap: 0.5ch;
 

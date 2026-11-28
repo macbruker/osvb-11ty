@@ -2,20 +2,7 @@
 layout: 'base.njk'
 ---
  
-
-<nav class="menu">
-  <ul>
-    {% for item in site.menu %}
-      <li>
-        <a href="{{ item.url or '#' }}">{{ item.title }}</a>
-        {# <p>{{ item.description }} #}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-
 {{ content | safe }}
-
 
 <div class="scroll-overflow">
   <div class="scroll-container">

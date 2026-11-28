@@ -2,32 +2,32 @@
 
 {% block breadcrumbs %}
   {% if parent %}
-    <div class="breadcrumbs">&larr; <a href="{{ parent.url }}">{{ parent.title }}</a></div>
+    <div class="breadcrumbs"><a href="{{ parent.url }}">{{ parent.title }}</a></div>
   {% endif %} 
 {% endblock %}
 
 {% block content %}
-<h1 class="title">
-  {{ title }}
-</h1>
+  <h1 class="title">
+    {{ title }}
+  </h1>
 
-{% if media %}
-<div class="thumbnail">
-  <img src="{{ media }}" eleventy:widths="360, 640" alt="">
-</div>
-{% endif %}
-
-{% if showTags %}
+  {% if showTags %}
   <div class="tags">
     {% for tag in tags | exclude('post') %}
       <span>#{{ tag }}</span>
     {% endfor %}
   </div>
-{% endif %}
+  {% endif %}
 
-<div class="ingress">
-  <p>{{ description | safe }}</p>
-</div>
+  {% if media %}
+  <div class="thumbnail">
+    <img src="{{ media }}" eleventy:widths="360, 640" alt="">
+  </div>
+  {% endif %}
+
+  <div class="ingress">
+    <p>{{ description | safe }}</p>
+  </div>
 
   {{ content | safe }}
 {% endblock %}

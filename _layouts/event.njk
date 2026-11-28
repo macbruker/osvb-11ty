@@ -2,7 +2,11 @@
 
 {% block breadcrumbs %}
   {% if parent %}
-    <div class="breadcrumbs">&larr; <a href="{{ parent.url }}">{{ parent.title }}</a></div>
+    <div class="breadcrumbs">
+        <a href="{{ parent.url }}">{{ parent.title }}</a>
+        <span> ▸ </span>
+        <span>{{ date_start | dateFormat('DDDD') | capitalize }}</span>
+    </div>
   {% endif %} 
 {% endblock %}
 
@@ -12,10 +16,6 @@
     <h1 class="title">{{ title }}</h1>
 
     <dl class="event-data">
-        <div>
-            <dt>Dato</dt>
-            <dd>{{ date_start | dateFormat('DDDD') | capitalize }}</dd>
-        </div>
         <div>
             <dt>Tid</dt>
             <dd>{{ date_start | dateFormat('T') | replace(':', '.') }}–{{ date_stop | dateFormat('T') | replace(':', '.') }}</dd>

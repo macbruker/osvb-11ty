@@ -8,7 +8,7 @@ showParent: true
 eleventyNavigation:
   key: Elite
   excerpt: Proffene
-  parent: Treninger
+  parent: Treningstilbud
 ---
 
 ## Sportslig ansvarlig og trenere

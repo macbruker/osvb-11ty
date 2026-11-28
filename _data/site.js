@@ -13,7 +13,7 @@ export default {
             url: '/ukeplan/'
         },
         {
-            title: 'Treninger',
+            title: 'Treningstilbud',
             description: 'Grupper, nivåer, priser',
             url: '/treninger/'
         },

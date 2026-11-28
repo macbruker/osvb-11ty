@@ -8,7 +8,7 @@ showParent: true
 eleventyNavigation:
   key: Junior
   excerpt: 1–10. klasse
-  parent: Treninger
+  parent: Treningstilbud
 ---
 
 ## Grupper

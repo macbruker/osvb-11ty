@@ -1,10 +1,10 @@
 ---
-title: Turneringer
+title: Turneringsinfo
 description: 'Det du trenger å vite om våre nasjonale, regionale og andre sosiale turneringer.'
 permalink: '/turneringer/'
 layout: default.njk
 eleventyNavigation:
-  key: Turneringer
+  key: Turneringsinfo
 ---
 
 

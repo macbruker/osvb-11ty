@@ -1,15 +1,15 @@
 ---
-title: Treninger
+title: Treningstilbud
 description: 'Det du trenger å vite om treninger på Voldsløkka.'
 permalink: '/treninger/'
 layout: default.njk
 eleventyNavigation:
-  key: Treninger
+  key: Treningstilbud
 ---
 
-{% set subpages = collections.all | eleventyNavigation("Treninger") | sort(false, false, "data.order") %}
+{% set subpages = collections.all | eleventyNavigation("Treningstilbud") | sort(false, false, "data.order") %}
 
-Treningstilbudet vårt er delt inn i tre målgrupper. Les mer om dem på sidene nedenfor.
+Treningstilbudet vårt er delt inn i tre målgrupper.
 
 <ul class="panellist">
 {% for entry in subpages %}
